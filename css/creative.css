@@ -484,6 +484,11 @@ body {
 .fa-github:hover,
 .fa-ship:hover,
 .fa-music:hover,
+.fa-linkedin:hover,
+.fa-google:hover,
+.fa-line-chart:hover,
+.fa-facebook:hover,
+.fa-twitter:hover,
 .fa-book:hover{
     color:black;
 }
