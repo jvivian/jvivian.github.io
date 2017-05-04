@@ -66,8 +66,9 @@
                     </a>
                 </li>
                 <li>
-                    <a href="rnaseq-clustering.html" style="text-align: center">
+                    <a href="rnaseq-clustering.html">
                         BACK
+                        <p></p>
                     </a>
                 </li>
             </ul>
@@ -90,23 +91,36 @@
 </header>
 
 
-<!-- Page Header -->
-<div class="head">
-
-</div>
-
-<div class="row">
-    <div class="col-md-3"></div>
-    <div class="col-md-6">
-        <script
-                src="js/bokeh/expression-PC.js"
-                id="df833cf0-c347-419d-b987-ae4e0c971c76"
-                data-bokeh-model-id="1f898c8d-b71f-465a-bfcc-a7ffb5a9dca7"
-                data-bokeh-doc-id="739819e7-fcbf-4e78-b014-c30513edcb7f"
-        ></script>
+<!-- Loader -->
+<div id="loader">
+    <div class="row">
+        <div class="col-md-12" style="height: 50px"></div>
+    </div>
+    <div class="row">
+        <div class="col-md-1"></div>
+        <div class="col-md-10" align="center">
+            <h2>Content Loading, Please Wait...</h2>
+        </div>
     </div>
 </div>
 
+<!-- Spacer -->
+<div class="row">
+    <div class="col-md-12" style="height: 20px"></div>
+</div>
+
+<!-- Big Plot -->
+<div class="row">
+    <div class="col-md-1"></div>
+    <div class="col-md-10">
+        <script
+                src="js/bokeh/expression-PC.js"
+                id="5f330fb8-2749-419c-ab31-bd9787ac33d8"
+                data-bokeh-model-id="7268d0f0-8931-43c0-9b02-2a30718850ff"
+                data-bokeh-doc-id="01c1d1f0-f6a1-4c49-a881-dbf7230d371f"
+        ></script>
+    </div>
+</div>
 
 <!-- jQuery -->
 <script src="js/jquery.js"></script>
@@ -118,6 +132,7 @@
 <script src="js/jquery.easing.min.js"></script>
 <script src="js/jquery.fittext.js"></script>
 <script src="js/wow.min.js"></script>
+<script src="js/jquery-loader.js"></script>
 
 <!-- Custom Theme JavaScript -->
 <script src="js/creative.js"></script>
