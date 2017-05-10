@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>RNA-seq Clustering</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/creative-rnaseq.css" type="text/css">
+
+    <!-- Font Awesome -->
+    <script src="https://use.fontawesome.com/87739b9324.js"></script>
+
+    <!-- Custom Fonts -->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800'
+          rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic'
+          rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css" type="text/css">
+
+    <!-- Plugin CSS -->
+    <link rel="stylesheet" href="css/animate.min.css" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+
+</head>
+
+<body>
+
+<!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse"
+                    data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="index.html">Jvivian.github.io</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a href="research.html" class="btn btn-sm">
+                        <i class="fa fa-3x fa-line-chart"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="rnaseq-clustering.html">
+                        BACK
+                        <p></p>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+<!-- Page Header -->
+<header class="intro-header">
+    <div class="container">
+        <div class="row">
+            <div class="caption" style="color: white">
+                <h2 style="margin: 0">RNA-Seq Expression Clustering</h2>
+                <h3>Using SKLearn, t-SNE, and Bokeh</h3>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Loader -->
+<div id="loader">
+    <div class="row">
+        <div class="col-md-12" style="height: 50px"></div>
+    </div>
+    <div class="row">
+        <div class="col-md-1"></div>
+        <div class="col-md-10" align="center">
+            <h2>Content Loading, Please Wait...</h2>
+        </div>
+    </div>
+</div>
+
+
+<div class="row">
+    <div class="col-md-6 col-md-offset-3">
+        <p></p>
+        <p>
+            These clusters were created using only 409 genes selected by a UCSF panel and represent optimal
+            oncogenes for differentiating cancer tissues.
+        </p>
+    </div>
+</div>
+
+<div style="width: 100%; height: 1px; border-bottom: 1px solid #000; padding-top: 5px; padding-bottom: 5px;"></div>
+<!-- First Row -->
+<div class="row" style="margin-top: 20px">
+    <div class="col-md-4">
+        <script
+                src="js/bokeh/expression-UCSF-adrenal.js"
+                id="2ebfa5e3-3920-4cdf-bd50-6c01340b780a"
+                data-bokeh-model-id="61b7bb76-a43d-422c-ac7f-ed78afa40cd1"
+                data-bokeh-doc-id="b87b19db-9928-4729-8cab-88fed4fe0b63"
+        ></script>
+    </div>
+    <div class="col-md-4">
+        <script
+                src="js/bokeh/expression-UCSF-bladder.js"
+                id="1500aa49-b8b5-404a-afd5-03e3c1de99ec"
+                data-bokeh-model-id="8d6a1951-d709-4cd6-b950-130e1b9cd38e"
+                data-bokeh-doc-id="a05e75be-94b3-4837-ab92-4c77e5874e61"
+        ></script>
+    </div>
+    <div class="col-md-4">
+        <script
+                src="js/bokeh/expression-UCSF-breast.js"
+                id="d1a11a25-736b-4e6a-b3fc-9bac2fc81dd5"
+                data-bokeh-model-id="5b6af95b-6e8a-4ee3-b1d7-25211b7394ee"
+                data-bokeh-doc-id="6edac9f1-ece0-42c6-a999-5a4d45e52da6"
+        ></script>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-12" style="height: 35px"></div>
+</div>
+<div style="width: 100%; height: 1px; border-bottom: 1px solid #000"></div>
+
+<!-- 2nd Row -->
+<div class="row" style="margin-top: 20px">
+    <div class="col-md-4">
+        <script
+                src="js/bokeh/expression-UCSF-cervix.js"
+                id="2ef7645a-3758-4fd9-b1e6-3e94ac7700bb"
+                data-bokeh-model-id="5bcdf172-2234-43b8-9179-199c22ac2a2e"
+                data-bokeh-doc-id="310cbf40-50cb-40c3-92da-ab3771fe622f"
+        ></script>
+    </div>
+    <div class="col-md-4">
+        <script
+                src="js/bokeh/expression-UCSF-colon.js"
+                id="dbfa9e44-c3dc-482c-8cf5-e6565391ff0e"
+                data-bokeh-model-id="b1a7eb69-8844-42f8-a9ec-91bd77af47bb"
+                data-bokeh-doc-id="37c2ec9a-0594-4150-a5e5-777c9dd3bbd6"
+        ></script>
+    </div>
+    <div class="col-md-4">
+        <script
+                src="js/bokeh/expression-UCSF-esophagus.js"
+                id="cbab8704-8720-4372-9a3b-eb85d2bba78b"
+                data-bokeh-model-id="744af09b-d977-4621-b37b-caed3c902d66"
+                data-bokeh-doc-id="a0f1e0c7-95fe-41e8-8340-25e2f9570f74"
+        ></script>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-12" style="height: 35px"></div>
+</div>
+<div style="width: 100%; height: 1px; border-bottom: 1px solid #000"></div>
+<!-- 3rd Row -->
+<div class="row" style="margin-top: 20px">
+    <div class="col-md-4">
+        <script
+                src="js/bokeh/expression-UCSF-head_and_neck.js"
+                id="9784bfc3-c73d-4669-ac81-e737a874b15e"
+                data-bokeh-model-id="0b3c26f5-3c14-4b76-8edc-ab809c539b8d"
+                data-bokeh-doc-id="d23d9870-2ac0-4055-ba46-a719bc473db2"
+        ></script>
+    </div>
+    <div class="col-md-4">
+        <script
+                src="js/bokeh/expression-UCSF-kidney.js"
+                id="5b2d37a0-674a-4d38-8abc-f94826ccf768"
+                data-bokeh-model-id="fe8e6f15-7c24-46f0-a754-ea38cfe207e2"
+                data-bokeh-doc-id="b14ba9a6-ab5d-498a-bac4-c44beb8bbbcc"
+        ></script>
+    </div>
+    <div class="col-md-4">
+        <script
+                src="js/bokeh/expression-UCSF-liver.js"
+                id="da47f7df-af54-4dfb-ad6b-ebd0c0f7bf75"
+                data-bokeh-model-id="79779601-6e1e-469f-bcb7-66b4b0d25be3"
+                data-bokeh-doc-id="4040aff1-7013-4b73-8fbc-1a7ecc24fa89"
+        ></script>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-12" style="height: 35px"></div>
+</div>
+<div style="width: 100%; height: 1px; border-bottom: 1px solid #000"></div>
+<!-- 4th Row -->
+<div class="row" style="margin-top: 20px">
+    <div class="col-md-4">
+        <script
+                src="js/bokeh/expression-UCSF-lung_adenocarcinoma.js"
+                id="3664528b-787c-4b61-8247-8f869e51fbac"
+                data-bokeh-model-id="84e8f917-19e3-4735-80f1-fcb205dc19b7"
+                data-bokeh-doc-id="02f42ec4-7594-4843-bcba-4b96a479ced6"
+        ></script>
+    </div>
+    <div class="col-md-4">
+        <script
+                src="js/bokeh/expression-UCSF-lung_mesothelioma.js"
+                id="5de0ee0f-a90c-487d-a65c-c023c5d7cf2a"
+                data-bokeh-model-id="4fe126ba-0a74-4e1a-b927-cb5b493b80df"
+                data-bokeh-doc-id="06605952-d660-410d-8ef0-5401aa5d49a9"
+        ></script>
+    </div>
+    <div class="col-md-4">
+        <script
+                src="js/bokeh/expression-UCSF-lung_squamous.js"
+                id="f7d99ce4-c037-45c8-a574-8f05f43cec65"
+                data-bokeh-model-id="300ab07f-28e0-4739-a8e5-8ebf13a0ef10"
+                data-bokeh-doc-id="c3eb83ce-ce46-43f7-a709-12656866e09f"
+        ></script>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-12" style="height: 35px"></div>
+</div>
+<div style="width: 100%; height: 1px; border-bottom: 1px solid #000"></div>
+<!-- 5th Row -->
+<div class="row" style="margin-top: 20px">
+    <div class="col-md-4">
+        <script
+                src="js/bokeh/expression-UCSF-ovary.js"
+                id="f52d7b2e-6f22-4a4e-b768-d9678c59a9db"
+                data-bokeh-model-id="47e75908-a274-4ed8-b49c-0b87d0e3b64b"
+                data-bokeh-doc-id="3599b4dc-01f7-4e3b-890b-3b6a199f7202"
+        ></script>
+    </div>
+    <div class="col-md-4">
+        <script
+                src="js/bokeh/expression-UCSF-pancreas.js"
+                id="97effebf-a799-43ff-afb6-98aa7079a8d3"
+                data-bokeh-model-id="b91a12f9-7b99-45b6-a153-a675d6a81b04"
+                data-bokeh-doc-id="2cdc8c1d-e760-4529-8fa9-a354b6c8fcae"
+        ></script>
+    </div>
+    <div class="col-md-4">
+        <script
+                src="js/bokeh/expression-UCSF-prostate.js"
+                id="c56b1ac7-6365-4af9-b79b-65b3be6ae6c5"
+                data-bokeh-model-id="cebe0336-ee51-43f8-a727-9eefc5c828e5"
+                data-bokeh-doc-id="b162ab09-9e93-470b-a18a-f3a5e0ca0ae4"
+        ></script>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-12" style="height: 35px"></div>
+</div>
+<div style="width: 100%; height: 1px; border-bottom: 1px solid #000"></div>
+<!-- 6th Row -->
+<div class="row" style="margin-top: 20px">
+    <div class="col-md-4">
+        <script
+                src="js/bokeh/expression-UCSF-skin.js"
+                id="e0534f56-9bad-4f61-9815-0326207b4e69"
+                data-bokeh-model-id="8ac3bd76-c925-466a-acca-c83c378c7510"
+                data-bokeh-doc-id="9a620b5b-dfef-4fb5-b3a7-14c3028241e2"
+        ></script>
+    </div>
+    <div class="col-md-4">
+        <script
+                src="js/bokeh/expression-UCSF-stomach.js"
+                id="4f5047a7-3360-48e0-9c6b-63de691eef70"
+                data-bokeh-model-id="207aea7f-5310-499b-9713-512fbe292c75"
+                data-bokeh-doc-id="ae2e71c0-d748-4c7d-8510-8d5e3994a328"
+        ></script>
+    </div>
+    <div class="col-md-4">
+        <script
+                src="js/bokeh/expression-UCSF-testis.js"
+                id="1dd65d5f-bc10-48a1-a802-3a11657b2ed0"
+                data-bokeh-model-id="afa3d74a-ff86-4b83-8f3d-dc9ac9f6ede1"
+                data-bokeh-doc-id="966f7984-09b9-44ad-9c14-627d625afc5c"
+        ></script>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-12" style="height: 35px"></div>
+</div>
+<div style="width: 100%; height: 1px; border-bottom: 1px solid #000"></div>
+<!-- 7th Row -->
+<div class="row" style="margin-top: 20px">
+    <div class="col-md-4">
+        <script
+                src="js/bokeh/expression-UCSF-thyroid.js"
+                id="00a538b8-f880-467a-93e1-fb7691f17965"
+                data-bokeh-model-id="bfe49532-6022-44ef-9119-61807f613542"
+                data-bokeh-doc-id="242a153c-05e3-497f-ba8b-ebda775ee911"
+        ></script>
+    </div>
+    <div class="col-md-4">
+        <script
+                src="js/bokeh/expression-UCSF-uterus_carcinosarcoma.js"
+                id="99f2ae04-8df3-43f7-a6e6-abf98d36b42d"
+                data-bokeh-model-id="a61d323a-1a8a-45bc-8158-9929b9f2afca"
+                data-bokeh-doc-id="ecc6f0cb-02e2-44e6-8f6a-9790cf1f8bf7"
+        ></script>
+    </div>
+    <div class="col-md-4">
+        <script
+                src="js/bokeh/expression-UCSF-uterus_endometrioid_carcinoma.js"
+                id="1643076d-d816-4459-ada7-3917ec822201"
+                data-bokeh-model-id="0e9fae0f-68bb-4b0b-b2b7-2579c47a1322"
+                data-bokeh-doc-id="458c61a6-d8cf-477b-aace-70484d7a9147"
+        ></script>
+    </div>
+</div>
+
+
+<!-- jQuery -->
+<script src="js/jquery.js"></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="js/bootstrap.min.js"></script>
+
+<!-- Plugin JavaScript -->
+<script src="js/jquery.easing.min.js"></script>
+<script src="js/jquery.fittext.js"></script>
+<script src="js/wow.min.js"></script>
+<script src="js/jquery-loader.js"></script>
+
+<!-- Custom Theme JavaScript -->
+<script src="js/creative.js"></script>
+
+<div class="modal"><!-- Place at bottom of page --></div>
+</body>
+
+</html>
