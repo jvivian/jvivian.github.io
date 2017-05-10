@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>RNA-seq Clustering</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/creative-rnaseq.css" type="text/css">
+
+    <!-- Font Awesome -->
+    <script src="https://use.fontawesome.com/87739b9324.js"></script>
+
+    <!-- Custom Fonts -->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800'
+          rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic'
+          rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css" type="text/css">
+
+    <!-- Plugin CSS -->
+    <link rel="stylesheet" href="css/animate.min.css" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+
+</head>
+
+<body>
+
+<!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse"
+                    data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="index.html">Jvivian.github.io</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a href="research.html" class="btn btn-sm">
+                        <i class="fa fa-3x fa-line-chart"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="rnaseq-clustering.html">
+                        BACK
+                        <p></p>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+<header class="intro-header">
+    <div class="container">
+        <div class="row">
+            <div class="caption" style="color: white">
+                <h2 style="margin: 0">RNA-Seq Expression Heatmaps</h2>
+                <h3>Average Euclidean Distance between Tissues</h3>
+            </div>
+        </div>
+    </div>
+</header>
+
+
+<!-- Page Header -->
+
+<div class="row">
+    <div class="col-md-3"></div>
+    <div class="col-md-6">
+        <br>
+        <p>
+            Each heatmap value is the median euclidean distance of all combinations of points between
+            all samples for two tissues. The code to produce these plots is located <a href="">here</a>.
+            The left-hand plots used all protein-coding genes (~20k genes), and the right-hand plots
+            used a small subset of 409 oncogenes curated by UCSF.
+        </p>
+    </div>
+</div>
+
+<div class="row" style="margin-top: 20px">
+    <div class="col-md-5 col-md-offset-1">
+        <script
+                src="js/bokeh-heatmaps/hm-pc-normal-gtex.js"
+                id="54115069-8907-476b-8364-15aea79998c5"
+                data-bokeh-model-id="5c10a5d2-c30e-4156-bbb3-9bea6d2f7f92"
+                data-bokeh-doc-id="63e1cf2f-4826-4a9d-a4f9-210d6de413fa"
+        ></script>
+    </div>
+    <div class="col-md-5">
+        <script
+                src="js/bokeh-heatmaps/hm-ucsf-normal-gtex.js"
+                id="df320491-8760-497c-b3ae-79466e248e72"
+                data-bokeh-model-id="26a58f5d-804d-4cc3-915d-14252902771a"
+                data-bokeh-doc-id="bb55d4af-d977-4f4c-959b-9d9f0a6cf144"
+        ></script>
+    </div>
+</div>
+
+<div style="width: 100%; height: 1px; border-bottom: 1px solid #000; padding-top: 5px; padding-bottom: 5px;"></div>
+<div class="row">
+    <div class="col-md-5 col-md-offset-1">
+        <script
+                src="js/bokeh-heatmaps/hm-pc-tumor-gtex.js"
+                id="7b932ecc-68d5-4e42-ac22-02b502d909f3"
+                data-bokeh-model-id="07d74b54-9712-4a27-9348-b3f43cbdad88"
+                data-bokeh-doc-id="4802e567-4ea5-4fb4-a2bc-137e67bb31a7"
+        ></script>
+    </div>
+    <div class="col-md-5">
+        <script
+                src="js/bokeh-heatmaps/hm-ucsf-tumor-gtex.js"
+                id="a888919f-9e37-4fbd-91dd-7adb83502b44"
+                data-bokeh-model-id="7efdbcf3-2d28-4786-8729-99e81f9fae4c"
+                data-bokeh-doc-id="7d061ae0-19c7-4168-b56d-a21bb2b972f9"
+        ></script>
+    </div>
+</div>
+
+<div style="width: 100%; height: 1px; border-bottom: 1px solid #000; padding-top: 5px; padding-bottom: 5px;"></div>
+<div class="row">
+    <div class="col-md-5 col-md-offset-1">
+        <script
+                src="js/bokeh-heatmaps/hm-pc-normal-tumor.js"
+                id="9d42f8f9-a162-4784-8126-4afe54fc8b52"
+                data-bokeh-model-id="eb127868-905b-4464-a7b4-2785c1179ee0"
+                data-bokeh-doc-id="3ac5ee3e-2849-4b65-b5cd-077492ab6269"
+        ></script>
+    </div>
+    <div class="col-md-5">
+        <script
+                src="js/bokeh-heatmaps/hm-ucsf-tumor-normal.js"
+                id="a05e7db3-5d90-44ef-9929-8a17c509e8aa"
+                data-bokeh-model-id="cd116e6a-ff84-4279-8c69-5ea0f78e8fec"
+                data-bokeh-doc-id="21a379d9-3ca8-4203-9b21-b97e07e579a5"
+        ></script>
+    </div>
+</div>
+
+<!-- First Row -->
+<!--
+<div class="row" style="margin-top: 20px">
+    <div class="col-md-4">
+        <script
+                src="js/bokeh-heatmaps/heatmap-normal-gtex.js"
+                id="a6e7c37f-7068-4b24-b460-8e2a93fa0a22"
+                data-bokeh-model-id="cb95f155-a98e-4975-aff9-24e2cef1d9b0"
+                data-bokeh-doc-id="36ad4ccf-ab5d-4c75-aad1-964e6797a783"
+        ></script>
+    </div>
+    <div class="col-md-4">
+
+        <script
+                src="js/bokeh-heatmaps/heatmap-normal-tumor.js"
+                id="80e5f805-bb94-4583-bc7f-93c2b7666f17"
+                data-bokeh-model-id="694efb29-14fc-45d4-bf76-121a246be2ba"
+                data-bokeh-doc-id="f54f64af-4d0a-477c-85b5-9c3b5714cc02"
+        ></script>
+    </div>
+    <div class="col-md-4">
+
+        <script
+                src="js/bokeh-heatmaps/heatmap-tumor-gtex.js"
+                id="63e89e22-5ba4-4b51-ae88-106443f5abbc"
+                data-bokeh-model-id="56c0e7ba-1897-486a-ada0-10e260a3a546"
+                data-bokeh-doc-id="551a0bb3-3e7d-4fd4-820e-4cc37c5d2e6d"
+        ></script>
+    </div>
+</div>
+-->
+
+
+<div style="width: 100%; height: 1px; border-bottom: 1px solid #000;"></div>
+<!-- 2nd Row -->
+<!--
+<div class="row">
+    <div class="col-md-4">
+
+        <script
+                src="js/bokeh-heatmaps/heatmap-normal-gtex-combat.js"
+                id="80c5ed39-43fb-4e8d-be38-2c2f7715ea72"
+                data-bokeh-model-id="92b9c3fa-76cb-4ba8-887c-bb1ca2b1f38c"
+                data-bokeh-doc-id="db5f3c45-5347-40cb-bc10-fa5291d034f4"
+        ></script>
+    </div>
+    <div class="col-md-4">
+
+        <script
+                src="js/bokeh-heatmaps/heatmap-normal-tumor-combat.js"
+                id="734d60a1-0597-43ce-9de9-5759d9ac5eae"
+                data-bokeh-model-id="8774f19e-5e29-4545-acf2-e39fc4801748"
+                data-bokeh-doc-id="5ff3b383-f467-47fd-b312-afb412fd1ac5"
+        ></script>
+
+    </div>
+    <div class="col-md-4">
+
+        <script
+                src="js/bokeh-heatmaps/heatmap-tumor-gtex-combat.js"
+                id="7a0a083d-b27e-4a03-afed-b4af7458052b"
+                data-bokeh-model-id="b7389182-3f7a-4544-83a1-0b95ae1f9a0a"
+                data-bokeh-doc-id="a2eeef18-1b46-4ba0-b785-50315aa1d8a6"
+        ></script>
+    </div>
+</div>
+-->
+
+<!-- jQuery -->
+<script src="js/jquery.js"></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="js/bootstrap.min.js"></script>
+
+<!-- Plugin JavaScript -->
+<script src="js/jquery.easing.min.js"></script>
+<script src="js/jquery.fittext.js"></script>
+<script src="js/wow.min.js"></script>
+
+<!-- Custom Theme JavaScript -->
+<script src="js/creative.js"></script>
+
+</body>
+
+</html>
