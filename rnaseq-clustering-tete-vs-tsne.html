@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>RNA-seq Clustering</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/creative-rnaseq.css" type="text/css">
+
+    <!-- Font Awesome -->
+    <script src="https://use.fontawesome.com/87739b9324.js"></script>
+
+    <!-- Custom Fonts -->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800'
+          rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic'
+          rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css" type="text/css">
+
+    <!-- Plugin CSS -->
+    <link rel="stylesheet" href="css/animate.min.css" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+
+</head>
+
+<body>
+
+<!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse"
+                    data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="index.html">Jvivian.github.io</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a href="research.html" class="btn btn-sm">
+                        <i class="fa fa-3x fa-line-chart"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="rnaseq-clustering.html">
+                        BACK
+                        <p></p>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+<!-- Page Header -->
+<header class="intro-header">
+    <div class="container">
+        <div class="row">
+            <div class="caption" style="color: white">
+                <h2 style="margin: 0">RNA-Seq Expression Clustering</h2>
+                <h3>Using SKLearn, t-SNE, t-ETE, and Bokeh</h3>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Loader -->
+<div id="loader">
+    <div class="row">
+        <div class="col-md-12" style="height: 50px"></div>
+    </div>
+    <div class="row">
+        <div class="col-md-1"></div>
+        <div class="col-md-10" align="center">
+            <h2>Content Loading, Please Wait...</h2>
+        </div>
+    </div>
+</div>
+
+<!-- Header -->
+
+<div class="row" style="margin-top: 20px">
+    <div class="col-md-2"></div>
+    <div class="col-md-8">
+        <p>
+            t-SNE is a relatively new dimensionality reduction algorithm that has garnered popularity in several
+            fields for its ability to create beatiful 2-dimsenional clusters of iconic datasets like MNIST. t-SNE
+            has recently caught the eye of the genomics community who often deal in high-dimensional feature spaces, but
+            t-SNE has several pitfalls that a lot of users are unaware of, such as cluster size and distance
+            between clusters being uninformative.
+            Source: <a href="http://distill.pub/2016/misread-tsne/">distill.pub/2016/misread-tsne</a>
+        </p>
+        <p>
+            t-ETE is an alternative algorithm actively in development at UCSC that aims to address t-SNE's
+            shortcomings and provide dimesnionality reduction that emphasizes information retention over aesthetics.
+        </p>
+        <p>
+            Here we explore application of t-SNE and t-ETE to RNA-seq expression data (normalized for sequencing depth)
+            collected from the Genotype Tissue Expression Consortium (GTEx) and The Cancer Genome Atlas (TCGA).
+        </p>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-3"></div>
+    <div class="col-md-3">
+        <h1>
+            t-SNE
+        </h1>
+    </div>
+    <div class="col-md-2"></div>
+    <div class="col-md-4">
+        <h1>
+            t-ETE
+        </h1>
+    </div>
+</div>
+
+
+<div style="width: 100%; height: 1px; border-bottom: 1px solid #000; padding-top: 5px; padding-bottom: 5px;"></div>
+<div class="row" style="margin-top: 20px">
+    <div class="col-md-2"></div>
+    <div class="col-md-8">
+        <p>
+            This first example is expression data collected from both normal and tumorous thyroid tissue. Both t-SNE and
+            t-ETE identify two subpopulations in the GTEx Thyroid data, but t-SNE places the two clusters on opposite
+            sides of the tumor data. Dimensionality reduction is often used iteratively, where subclusters are then
+            selected to be replot.
+            If we isolate just the thyroid tissue from GTEx (blue) and recluster it with t-SNE and t-ETE,
+            how much of the structure is preserved?
+        </p>
+    </div>
+</div>
+
+<div class="row" style="margin-top: 20px">
+    <div class="col-md-1"></div>
+    <div class="col-md-5">
+        <script
+                src="js/bokeh/Thyroid.js"
+                id="b7ace8a9-2231-4370-82ec-fd16ca074dbf"
+                data-bokeh-model-id="b4f782eb-65f9-40d8-9e7c-9818bfde6157"
+                data-bokeh-doc-id="a2b16add-cdc2-4ad0-b777-be8c2c72f8af"
+        ></script>
+    </div>
+    <div class="col-md-5">
+        <script
+                src="js/bokeh/javascript/Thyroid-TETE.js"
+                id="96f58bbc-2fc3-44c5-83d1-1dd4e644ee62"
+                data-bokeh-model-id="31d93dec-adb9-4ec3-83cb-5720254dc48c"
+                data-bokeh-doc-id="96dc13f0-25a8-4fad-b9d5-fdb0a54ca935"
+        ></script>
+    </div>
+</div>
+
+
+<div class="row" style="margin-top: 50px">
+    <div class="col-md-2"></div>
+    <div class="col-md-8">
+        <p>
+            t-SNE turns the samples into a single blob whereas t-ETE preserves the original structure.
+        </p>
+    </div>
+</div>
+
+<div class="row" style="margin-top: 20px">
+    <div class="col-md-1"></div>
+    <div class="col-md-5">
+        <script
+                src="js/bokeh/javascript/Manfred-Thyroid-GTEx-only-TSNE.js"
+                id="a478ebe7-da2b-4bba-9624-d97627cfbbe1"
+                data-bokeh-model-id="854a7c7a-bc73-42e0-a6b7-f7fdc0407d76"
+                data-bokeh-doc-id="005d2b81-1d9e-4469-9937-263643d34c0b"
+        ></script>
+    </div>
+    <div class="col-md-5">
+        <script
+                src="js/bokeh/javascript/Manfred-Thyroid-GTEx-only-TETE.js"
+                id="93c96835-e457-49c6-afe0-26d4af79be09"
+                data-bokeh-model-id="a5711dce-5553-403b-b7a1-ba521a4391ba"
+                data-bokeh-doc-id="7a2b98fa-c8d2-404b-bebb-668b05318c25"
+        ></script>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-12" style="height: 35px"></div>
+</div>
+<div style="width: 100%; height: 1px; border-bottom: 1px solid #000; padding-top: 5px; padding-bottom: 5px;"></div>
+<div class="row" style="margin-top: 20px">
+    <div class="col-md-2"></div>
+    <div class="col-md-8">
+        <p>
+            Next, we'll examine what happens when we try and combine two tissues. Here is t-SNE and t-ETE clustering
+            for uterus
+        </p>
+    </div>
+</div>
+
+<div class="row" style="margin-top: 20px">
+    <div class="col-md-1"></div>
+    <div class="col-md-5">
+        <script
+                src="js/bokeh/Uterus.js"
+                id="1806d1cb-0f78-44c1-bd0a-1a663454e100"
+                data-bokeh-model-id="73c57019-626d-48b7-afa4-1f86e797bb2b"
+                data-bokeh-doc-id="3172e5fd-c5a4-4053-bdd4-2327cd98c307"
+        ></script>
+    </div>
+    <div class="col-md-5">
+        <script
+                src="js/bokeh/javascript/Uterus-TETE.js"
+                id="38d597b8-4017-4f0b-8602-351099c1a806"
+                data-bokeh-model-id="530cecec-149e-4dd3-a519-c4ebe0145e63"
+                data-bokeh-doc-id="6bb302f0-4db2-4e82-8ab4-ec9f6a37f171"
+        ></script>
+    </div>
+    <div class="col-md-1"></div>
+</div>
+
+
+<div class="row" style="margin-top: 50px">
+    <div class="col-md-2"></div>
+    <div class="col-md-8 text-center">
+        <p>
+            Now grouping both thyroid and uterus
+        </p>
+    </div>
+</div>
+
+<div class="row" style="margin-top: 20px">
+    <div class="col-md-1"></div>
+    <div class="col-md-5">
+        <script
+                src="js/bokeh/javascript/Manfred-Two-Groups-Thyroid-Uterus-TSNE.js"
+                id="51d8aa69-5603-4e37-84a4-ecf5827d557b"
+                data-bokeh-model-id="70fa4c66-2b6e-42ef-b40e-79c6fee5c8f3"
+                data-bokeh-doc-id="01641f1a-3965-48bd-8b46-3778d553b6c2"
+        ></script>
+    </div>
+    <div class="col-md-5">
+        <script
+                src="js/bokeh/javascript/Manfred-Two-Groups-Thyroid-Uterus-TETE.js"
+                id="d57ce3c5-afdd-412c-aecd-1e288a1ccbc2"
+                data-bokeh-model-id="d51fd6e0-745b-4a75-9d5b-0261914d09e2"
+                data-bokeh-doc-id="0cfa3302-d663-4533-8453-fa789eac2374"
+        ></script>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-12" style="height: 35px"></div>
+</div>
+<div style="width: 100%; height: 1px; border-bottom: 1px solid #000; padding-top: 5px; padding-bottom: 5px;"></div>
+<div class="row" style="margin-top: 50px">
+    <div class="col-md-2"></div>
+    <div class="col-md-8 text-center">
+        <p>
+            Another big issue with t-SNE is identification of outliers. Here are a few selected tissues to illustrate
+        </p>
+    </div>
+</div>
+
+<div class="row" style="margin-top: 20px">
+    <div class="col-md-1"></div>
+    <div class="col-md-5">
+        <script
+                src="js/bokeh/Ovary.js"
+                id="f6d1d3aa-49f8-40ba-aafc-0e246176b1dd"
+                data-bokeh-model-id="b8359702-5218-4daf-907e-f0b53b6fb92a"
+                data-bokeh-doc-id="8155773e-a78a-403e-93f9-ce62bc3a7596"
+        ></script>
+    </div>
+    <div class="col-md-5">
+        <script
+                src="js/bokeh/javascript/Ovary-TETE.js"
+                id="b1098844-0a97-43ee-bad2-e6e7f3ab26cf"
+                data-bokeh-model-id="05711c24-9098-45d8-995f-0f8a1b555fd4"
+                data-bokeh-doc-id="5329cb75-ba3d-4526-807c-6174a4dcfe1e"
+        ></script>
+    </div>
+    <div class="col-md-1"></div>
+</div>
+
+<div class="row">
+    <div class="col-md-12" style="height: 35px"></div>
+</div>
+<div style="width: 100%; height: 1px; border-bottom: 1px solid #000; padding-top: 5px; padding-bottom: 5px;"></div>
+<div class="row" style="margin-top: 20px">
+    <div class="col-md-1"></div>
+    <div class="col-md-5">
+        <script
+                src="js/bokeh/Pancreas.js"
+                id="59c289ee-cdbf-488c-8834-fa73efcc7a17"
+                data-bokeh-model-id="259e3f8c-ae0a-43aa-9086-bc6fe931fc8d"
+                data-bokeh-doc-id="dfc00f07-32d5-408e-a088-ee6dafa49c42"
+        ></script>
+    </div>
+    <div class="col-md-5">
+        <script
+                src="js/bokeh/javascript/Pancreas-TETE.js"
+                id="b9ada754-e096-47a1-a15b-b5e1d7508788"
+                data-bokeh-model-id="336e3d55-780b-43a6-b5df-6f0b60cb541b"
+                data-bokeh-doc-id="7fad7f20-2da1-486c-b36f-73835ac7337e"
+        ></script>
+    </div>
+    <div class="col-md-1"></div>
+</div>
+
+
+<div class="row">
+    <div class="col-md-12" style="height: 35px"></div>
+</div>
+<div style="width: 100%; height: 1px; border-bottom: 1px solid #000; padding-top: 5px; padding-bottom: 5px;"></div>
+<div class="row" style="margin-top: 20px">
+    <div class="col-md-1"></div>
+    <div class="col-md-5">
+        <script
+                src="js/bokeh/Testis.js"
+                id="0e5661c5-779d-4293-9cd4-52add39bb4bb"
+                data-bokeh-model-id="ac0602a7-735a-4154-ac84-29d6017e7376"
+                data-bokeh-doc-id="3758f522-7319-436c-9179-49beed974c6d"
+        ></script>
+    </div>
+    <div class="col-md-5">
+        <script
+                src="js/bokeh/javascript/Testis-TETE.js"
+                id="dae0cffd-dbaa-4a35-9cb5-9b32f379d6cb"
+                data-bokeh-model-id="7dfbb228-37e6-431c-844e-1f88c832b7dd"
+                data-bokeh-doc-id="f42723ea-a1dc-471a-bf1c-51a63545ad63"
+        ></script>
+    </div>
+    <div class="col-md-1"></div>
+</div>
+
+
+<div class="row">
+    <div class="col-md-12" style="height: 35px"></div>
+</div>
+<div style="width: 100%; height: 1px; border-bottom: 1px solid #000; padding-top: 5px; padding-bottom: 5px;"></div>
+
+
+<!-- jQuery -->
+<script src="js/jquery.js"></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="js/bootstrap.min.js"></script>
+
+<!-- Plugin JavaScript -->
+<script src="js/jquery.easing.min.js"></script>
+<script src="js/jquery.fittext.js"></script>
+<script src="js/wow.min.js"></script>
+<script src="js/jquery-loader.js"></script>
+
+<!-- Custom Theme JavaScript -->
+<script src="js/creative.js"></script>
+
+<div class="modal"><!-- Place at bottom of page --></div>
+</body>
+
+</html>
