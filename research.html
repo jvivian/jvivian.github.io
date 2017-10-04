@@ -61,19 +61,49 @@
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right">
                 <li>
-                    <a href="#pubs" class="btn btn-sm page-scroll">
-                        <i class="fa fa-3x fa-book" style="color:gray"></i>
+                    <a style="margin-top: 10px" class="btn btn-small dropdown-toggle" type="button"
+                       data-toggle="dropdown">
+                        Research
+                        <span class="caret"></span>
                     </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="https://github.com/BD2KGenomics/toil-rnaseq/" target="_blank">
+                            Massively Scalable RNA-seq Expression Workflow
+                        </a></li>
+                        <li><a href="rnaseq-clustering.html" target="_blank">
+                            RNA-seq Expression Clustering from TCGA and GTEx
+                        </a></li>
+                        <li><a href="data/Vivian_J__Advancement__Proposal.pdf" target="_blank">
+                            Advancement Proposal
+                        </a></li>
+                        <li><a href="data/stanford-gtex-poster.pdf" target="_blank">Stanford GTEx Poster</a></li>
+                        <li><a href="notebooks/Pairwise-DESeq2-Partition-Method-and-Concordance.html" target="_blank">
+                            Pairwise DESeq2 Partition Method and Concordance
+                        </a></li>
+                        <li><a href="data/dag-2-tree.pdf" target="_blank">
+                            Directed Acyclic Graph Conversion to Tree with Two Edge Types
+                        </a></li>
+                        <li><a href="data/Vivian_NIH_Poster.pdf" target="_blank">NIH BD2K Poster</a></li>
+                        <li><a href="data/Vivian_MS_Capstone_2014.pdf" target="_blank">Master's Capstone</a></li>
+                    </ul>
                 </li>
                 <li>
-                    <a href="#notebooks" class="btn btn-sm page-scroll">
-                        <i class="fa fa-3x fa-code" style="color:gray"></i>
+                    <a style="margin-top: 10px" class="btn btn-small dropdown-toggle" type="button"
+                       data-toggle="dropdown">
+                        Hobbies
+                        <span class="caret"></span>
                     </a>
-                </li>
-                <li>
-                    <a href="#misc" class="btn btn-sm page-scroll">
-                        <i class="fa fa-3x fa-bookmark" style="color:gray"></i>
-                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="music.html">
+                            Music
+                        </a></li>
+                        <li><a href="https://1drv.ms/o/s!AiirpWvlh1BpiScN03O90iDpTAlf" target="_blank">
+                            Books
+                        </a></li>
+                        <li><a href="https://masteroverwatch.com/profile/pc/us/Thyrus-1549" target="_blank">
+                            Overwatch
+                        </a></li>
+                    </ul>
                 </li>
             </ul>
         </div>
@@ -91,9 +121,9 @@
         </div>
         <div class="row">
             <div class="col-lg-3"></div>
-            <div class="col-lg-3">
-                <div class="col-xs-12"></div>
-                <div style="font-size: 2em; color: gray; font-weight: bold; padding-bottom: 0.3em;">John Vivian</div>
+            <div class="col-lg-3" style="margin-top: -20px">
+                <div style="font-size: 2em; color: darkgrey; font-weight: bold; padding-bottom: 0.3em;">John Vivian
+                </div>
                 <hr>
                 <div style="font-size: 1.2em; color: white; font-weight: bold; padding-bottom: 0.3em;">Ph.D. Student
                 </div>
@@ -106,187 +136,59 @@
                 <div class="col-xs-12" style="height:25px;"></div>
                 <a href="data/vivian_cv-4-20-17.pdf" class="btn btn-lg"
                    style="background: none;border: 2px solid #0099cc;" target="_blank">CV</a>
-                <div class="col-xs-12" style="height:10px;"></div>
                 <ul class="list-inline" style="font-size: 1.9em; margin-top: 0.5em;">
-                    <li>
-                        <a href="https://scholar.google.com/citations?user=CXQJI-AAAAAJ&hl=en&oi=ao" target="_blank">
-                            <i class="fa fa-google"></i>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://www.github.com/jvivian" target="_blank">
-                            <i class="fa fa-github"></i>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://www.linkedin.com/in/john-vivian-913b41a6/" target="_blank">
-                            <i class="fa fa-linkedin-square"></i>
-                        </a>
-                    </li>
                 </ul>
             </div>
             <div class="col-lg-3">
-                <img src="img/me.jpg" class="img-thumbnail">
+                <img src="img/me.jpg" class="img-thumbnail" id="me">
             </div>
         </div>
     </div>
 </header>
 
-
 <!-- Main Content -->
 <section id="bio">
     <div class="container">
-        <div class="row" style="margin-top: -20px">
+        <div class="row" style="margin-top: -70px">
             <div class="col-md-10 col-md-offset-1">
-                <p>
-                    I am a third-year bioinformatics Ph.D. student at UC Santa Cruz working in the Computational
+                <p style="font-size: 16px; font-family: Droid Serif;">
+                    I am a fourth-year bioinformatics Ph.D. student at UC Santa Cruz working in the Computational
                     Genomics Lab at the Genomics Institute. I spent the first two years helping develop <a
                         href="//www.github.com/BD2KGenomics/Toil" target="_blank">Toil</a>, an open-source distributed
                     workflow
-                    system designed for massive scalability, and writing genomic workflows that use Toil. This work
+                    system designed for massive scalability. This work
                     enabled a large-scale compute of gene- and isoform-level expression values
                     from 20,000 RNA-seq samples across several important datasets, which you can <a
                         href="//www.nature.com/nbt/journal/v35/n4/full/nbt.3772.html" target="_blank">read about
-                    here</a>.
-                </p>
-                <p>
+                    here</a>. This work used an <a href="https://github.com/BD2KGenomics/toil-rnaseq" target="_blank">RNA-seq
+                    workflow</a> I devloped and maintain.
+                <p style="font-size: 16px; font-family: Droid Serif;">
                     My current PhD research is focused on analyzing the expression differences between a variety of
                     cancers at the tissue level. I believe in open-source software and science and
-                    actively post all my work on <a href="//www.github.com/jvivian" target="_blank">Github</a>.
+                    actively share my work on <a href="//www.github.com/jvivian" target="_blank">Github</a>.
                 </p>
-                <h2 id="pubs">
-                    <i class="fa fa-book"> Publications</i>
-                </h2>
-                <table class="table table-hover">
-                    <tbody>
-                    <tr>
-                        <td class="col-md-3">
-                            <a href="http://www.nature.com/nbt/journal/v35/n4/full/nbt.3772.html" target="_blank">
-                                <img src="img/toil_ss.png" width="250px">
-                            </a>
-                        </td>
-                        <td>
-                            <p>
-                                <strong>Vivian J</strong>, Rao AA, Nothaft FA, Ketchum C, Armstrong J, Novak A, Pfeil J,
-                                Narkizian J,
-                                Deran AD, Musselman-Brown A, et al. <u>Toil enables reproducible, open source, big
-                                biomedical data analyses</u>. Nat Biotechnol. 2017 Apr 11;35(4):314-316. doi:
-                                10.1038/nbt.3772. PubMed PMID: 28398314.
-                                <br>
-                                [<a href="//www.nature.com/nbt/journal/v35/n4/full/nbt.3772.html">NBT</a>]
-                                [<a href="//biorxiv.org/content/early/2016/07/07/062497">Preprint</a>]
-                            </p>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="col-md-3">
-                            <a href="//www.ncbi.nlm.nih.gov/pmc/articles/PMC5210591/" target="_blank">
-                                <img src="img/nar_pub.png" width="250px">
-                            </a>
-                        </td>
-                        <td>
-                            <p>
-                                Tyner C, Barber GP, Casper J, Clawson H, Diekhans M, Eisenhart C, Fischer CM, Gibson D,
-                                Gonzalez JN, Guruvadoo L, et al. <u>The UCSC Genome Browser database: 2017 update.
-                                Nucleic
-                                Acids Res</u>. 2017 Jan 4;45(D1):D626-D634. doi: 10.1093/nar/gkw1134. Epub 2016 Nov 29.
-                                PubMed PMID: 27899642; PubMed Central PMCID: PMC5210591
-                                <br>
-                                [<a href="//www.ncbi.nlm.nih.gov/pmc/articles/PMC5210591/" target="_blank">NAR</a>]
-                            </p>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="col-md-3">
-                            <a href="//www.ncbi.nlm.nih.gov/pmc/articles/PMC3839712/" target="_blank">
-                                <img src="img/pnas_pub.png" width="250px">
-                            </a>
-                        </td>
-                        <td>
-                            <p>
-                                Schreiber J, Wescoe ZL, Abu-Shumays R, <strong>Vivian JT</strong>, Baatar B, Karplus K,
-                                Akeson M. <u>Error
-                                rates for nanopore discrimination among cytosine, methylcytosine, and
-                                hydroxymethylcytosine along individual DNA strands</u>. Proc Natl Acad Sci U S A. 2013
-                                Nov
-                                19;110(47):18910-5. doi: 10.1073/pnas.1310615110. Epub 2013 Oct 28. PubMed PMID:
-                                24167260; PubMed Central PMCID: PMC3839712.
-                                <br>
-                                [<a href="//www.ncbi.nlm.nih.gov/pmc/articles/PMC3839712/" target="_blank">PNAS</a>]
-                            </p>
-                        </td>
-                    </tr>
-                    </tbody>
-                </table>
-
-                <!-- Projects and Notebooks -->
-                <h2 id="notebooks">
-                    <i class="fa fa-code"> Projects and Notebooks</i>
-                </h2>
-                <table class="table table-hover">
-                    <tbody>
-                    <tr>
-                        <td>
-                            <a href="rnaseq-clustering.html" target="_blank">
-                                RNA-seq Expression Clustering from TCGA and GTEx
-                            </a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <a href="notebooks/Pairwise-DESeq2-Partition-Method-and-Concordance.html" target="_blank">
-                                Pairwise DESeq2 Partition Method and Concordance
-                            </a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <a href="https://github.com/BD2KGenomics/toil-rnaseq/blob/master/README.md" target="_blank">
-                                Massively Scalable RNA-seq Expression Workflow
-                            </a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <a href="data/dag-2-tree.pdf" target="_blank">
-                                Directed Acyclic Graph Conversion to Tree with Two Edge Types
-                            </a>
-                        </td>
-                    </tr>
-                    </tbody>
-                </table>
-
-                <!-- Misc -->
-                <h2 id="misc">
-                    <i class="fa fa-bookmark"> Misc</i>
-                </h2>
-                <ul>
-                    <li>
-                        <a href="https://1drv.ms/o/s!AiirpWvlh1BpiScN03O90iDpTAlf" target="_blank">List of books</a>
-                        that I've read &#8212; mostly sci-fi and fantasy.
-                    </li>
-                    <li>
-                        I play quite a bit of <a
-                            href="https://masteroverwatch.com/profile/pc/us/Thyrus-1549" target="_blank">Overwatch</a>
-                        as a way to stay in touch with friends.
-                    </li>
-                    <li>
-                        <a href="data/stanford-gtex-poster.pdf" target="_blank">Poster</a> for Stanford GTEx Conference
-                        (7-11-16).
-                    </li>
-                    <li>
-                        <a href="data/Vivian_NIH_Poster.pdf" target="_blank">Poster</a> for NIH BD2k Conference
-                        (11-12-15).
-                    </li>
-                    <li>
-                        My <a href="data/Vivian_MS_Capstone_2014.pdf">master's capstone</a> on analyzing error rates for
-                        a nanopore rereading mechanism.
-                    </li>
-                </ul>
             </div>
         </div>
     </div>
 </section>
+
+<!-- Footer -->
+<div class="navbar navbar-fixed-bottom" style="background-color: whitesmoke; height: 100px">
+    <div class="row">
+        <div class="col-md-4" style="text-align: center; margin-top: 25px">
+            <a href="https://scholar.google.com/citations?user=CXQJI-AAAAAJ&hl=en&oi=ao" target="_blank">
+                <i class="fa fa-3x fa-google"></i> Publications</a></div>
+        <div class="col-md-4" style="text-align: center; margin-top: 25px">
+            <a href="https://www.github.com/jvivian" target="_blank">
+                <i class="fa fa-3x fa-github"></i> Github</a>
+        </div>
+        <div class="col-md-4" style="text-align: center; margin-top: 25px">
+            <a href="https://www.linkedin.com/in/john-vivian-913b41a6/" target="_blank">
+                <i class="fa fa-3x fa-linkedin-square"></i> LinkedIn
+            </a>
+        </div>
+    </div>
+</div>
 
 <!-- jQuery -->
 <script src="js/jquery.js"></script>
