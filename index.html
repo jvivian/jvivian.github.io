@@ -9,13 +9,16 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Jvivian.github.io</title>
+    <title>Research</title>
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="css/creative.css" type="text/css">
+    <link rel="stylesheet" href="css/creative-research.css" type="text/css">
+
+    <!-- Font Awesome -->
+    <script src="https://use.fontawesome.com/87739b9324.js"></script>
 
     <!-- Custom Fonts -->
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800'
@@ -34,101 +37,159 @@
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 
+
 </head>
 
-<body id="page-top">
+<body>
 
-<nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
+<!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
     <div class="container-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse"
                     data-target="#bs-example-navbar-collapse-1">
                 <span class="sr-only">Toggle navigation</span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand page-scroll" href="#page-top">Jvivian.github.io</a>
+            <a class="navbar-brand" href="index.html"> <i class="fa fa-2x fa-cube"></i>  </a>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right">
                 <li>
-                    <a href="//www.github.com/jvivian" class="btn btn-sm" target="_blank">
-                        <i class="fa fa-3x fa-github"></i>
+                    <a style="margin-top: 10px" class="btn btn-small dropdown-toggle" type="button"
+                       data-toggle="dropdown">
+                        Research
+                        <span class="caret"></span>
                     </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="https://github.com/BD2KGenomics/toil-rnaseq/" target="_blank">
+                            Scalable RNA-seq Expression Workflow
+                        </a></li>
+                        <li><a href="rnaseq-clustering.html" target="_blank">
+                            RNA-seq Expression Clustering of TCGA and GTEx
+                        </a></li>
+                        <li><a href="data/Vivian_J__Advancement__Proposal.pdf" target="_blank">
+                            PhD Advancement Proposal
+                        </a></li>
+                        <li><a href="data/stanford-gtex-poster.pdf" target="_blank">Stanford GTEx Poster</a></li>
+                        <li><a href="notebooks/Pairwise-DESeq2-Partition-Method-and-Concordance.html" target="_blank">
+                            Pairwise DESeq2 Partition Method and Concordance
+                        </a></li>
+                        <li><a href="data/dag-2-tree.pdf" target="_blank">
+                            Directed Acyclic Graph Conversion to Tree with Two Edge Types
+                        </a></li>
+                        <li><a href="data/Vivian_NIH_Poster.pdf" target="_blank">NIH BD2K Poster</a></li>
+                        <li><a href="data/Vivian_MS_Capstone_2014.pdf" target="_blank">Master's Capstone</a></li>
+                    </ul>
                 </li>
                 <li>
-                    <a href="research.html" class="btn btn-sm">
-                        <i class="fa fa-3x fa-line-chart"></i>
+                    <a style="margin-top: 10px" class="btn btn-small dropdown-toggle" type="button"
+                       data-toggle="dropdown">
+                        Hobbies
+                        <span class="caret"></span>
                     </a>
-                </li>
-                <li>
-                    <a href="music.html" class="btn btn-sm">
-                        <i class="fa fa-3x fa-music"></i>
-                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="music.html">
+                            Music
+                        </a></li>
+                        <li><a href="https://1drv.ms/o/s!AiirpWvlh1BpiScN03O90iDpTAlf" target="_blank">
+                            Books
+                        </a></li>
+                        <li><a href="https://github.com/jvivian/Children-of-Skynet/" target="_blank">Machine Learning</a></li>
+                        <li><a href="https://masteroverwatch.com/profile/pc/us/Thyrus-1549" target="_blank">
+                            Overwatch
+                        </a></li>
+                    </ul>
                 </li>
             </ul>
         </div>
         <!-- /.navbar-collapse -->
     </div>
-    <!-- /.container-fluid -->
+    <!-- /.container -->
 </nav>
 
-<header>
-    <div class="header-content">
-        <div class="header-content-inner">
-            <h2>¯\_(ツ)_/¯</h2>
-            <p></p>
-            <a href="#projects" class="btn btn-primary btn-xl page-scroll">
-                <i class="fa fa-3x fa-arrow-circle-down"></i>
-            </a>
+<!-- Page Header -->
+<!-- Set your background image for this header on the line below. -->
+<header class="intro-header">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12" style="height:120px;"></div>
+        </div>
+        <div class="row">
+            <div class="col-lg-3"></div>
+            <div class="col-lg-3" style="margin-top: -20px">
+                <div style="font-size: 2em; color: darkgrey; font-weight: bold; padding-bottom: 0.3em;">John Vivian
+                </div>
+                <hr>
+                <div style="font-size: 1.2em; color: white; font-weight: bold; padding-bottom: 0.3em;">Ph.D. Student
+                </div>
+                <div style="font-size: 1.2em; font-weight: bold; padding-bottom: 0.3em;">
+                    <a href="https://cgl.genomics.ucsc.edu/" style="color: #4582ec" target="_blank">Bioinformatics</a>
+                </div>
+                <div style="font-size: 1.2em; font-weight: bold; padding-bottom: 0.3em;">
+                    <a href="https://www.ucsc.edu/" style="color: #4582ec" target="_blank">UC Santa Cruz</a>
+                </div>
+                <div class="col-xs-12" style="height:25px;"></div>
+                <a href="data/vivian_cv-4-20-17.pdf" class="btn btn-lg"
+                   style="background: none;border: 2px solid #0099cc;" target="_blank">CV</a>
+                <ul class="list-inline" style="font-size: 1.9em; margin-top: 0.5em;">
+                </ul>
+            </div>
+            <div class="col-lg-3">
+                <img src="img/me.jpg" class="img-thumbnail" id="me">
+            </div>
         </div>
     </div>
 </header>
 
-<section id="projects">
+<!-- Main Content -->
+<section id="bio">
     <div class="container">
-        <div class="row">
-            <div class="col-lg-12 text-center">
-            </div>
-        </div>
-    </div>
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-4 col-md-6 text-center">
-                <div class="service-box">
-                    <a href="//github.com/jvivian" target="_blank">
-                        <i class="fa fa-4x fa-github wow bounceIn text-primary"></i>
-                    </a>
-                    <h3>Genomic Pipelines</h3>
-                    <p class="text-muted">I develop and manage several genomic pipelines on behalf of the Computational
-                        Genomics Lab at the Genomics Institute of UC Santa Cruz</p>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 text-center">
-                <div class="service-box">
-                    <a href="research.html">
-                        <i class="fa fa-4x fa-line-chart wow bounceIn text-primary" data-wow-delay=".2s"></i>
-                    </a>
-                    <h3>Research</h3>
-                    <p class="text-muted">Publications, notebooks, etc...</p>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 text-center">
-                <div class="service-box">
-                    <a href="music.html">
-                        <i class="fa fa-4x fa-music wow bounceIn text-primary" data-wow-delay=".3s"></i>
-                    </a>
-                    <h3>Music</h3>
-                    <p class="text-muted">Collection of musical projects and performances</p>
-                </div>
+        <div class="row" style="margin-top: -70px">
+            <div class="col-md-10 col-md-offset-1">
+                <p style="font-size: 16px; font-family: Droid Serif;">
+                    I am a fourth-year bioinformatics PhD student at UC Santa Cruz working in the Computational
+                    Genomics Lab at the Genomics Institute. I spent the first two years helping develop <a
+                        href="//www.github.com/BD2KGenomics/Toil" target="_blank">Toil</a>, an open-source distributed
+                    workflow
+                    system designed for massive scalability. This work
+                    enabled a large-scale compute of gene- and isoform-level expression values
+                    from 20,000 RNA-seq samples across several important datasets, which you can <a
+                        href="//www.nature.com/nbt/journal/v35/n4/full/nbt.3772.html" target="_blank">read about
+                    here</a>. This work used an <a href="https://github.com/BD2KGenomics/toil-rnaseq" target="_blank">RNA-seq
+                    workflow</a> I devloped and maintain.
+                <p style="font-size: 16px; font-family: Droid Serif;">
+                    My current research is focused on analyzing the expression differences between a variety of
+                    cancers at the tissue level. I believe in open-source software and science and
+                    actively share my work on <a href="//www.github.com/jvivian" target="_blank">Github</a>.
+                </p>
             </div>
         </div>
     </div>
 </section>
+
+<!-- Footer -->
+<div class="navbar navbar-fixed-bottom" style="background-color: whitesmoke; height: 100px">
+    <div class="row">
+        <div class="col-md-4" style="text-align: center; margin-top: 25px">
+            <a href="https://scholar.google.com/citations?user=CXQJI-AAAAAJ&hl=en&oi=ao" target="_blank">
+                <i class="fa fa-3x fa-google"></i> Publications</a></div>
+        <div class="col-md-4" style="text-align: center; margin-top: 25px">
+            <a href="https://www.github.com/jvivian" target="_blank">
+                <i class="fa fa-3x fa-github"></i> Github</a>
+        </div>
+        <div class="col-md-4" style="text-align: center; margin-top: 25px">
+            <a href="https://www.linkedin.com/in/john-vivian-913b41a6/" target="_blank">
+                <i class="fa fa-3x fa-linkedin-square"></i> LinkedIn
+            </a>
+        </div>
+    </div>
+</div>
 
 <!-- jQuery -->
 <script src="js/jquery.js"></script>
