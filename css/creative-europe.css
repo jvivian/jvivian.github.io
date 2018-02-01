@@ -182,7 +182,7 @@ header {
     position: relative;
     text-align: center;
     color: #fff;
-    background: url(../img/europe/europe_cover.png) center;
+    background: url(../static/archived_content/europe/europe_cover.png) center;
     background-size: cover;
     overflow: visible;
 }

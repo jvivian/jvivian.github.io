@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>RNA-seq Clustering</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="../../css/bootstrap.min.css" type="text/css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../../css/creative-rnaseq.css" type="text/css">
+
+    <!-- Font Awesome -->
+    <script src="https://use.fontawesome.com/87739b9324.js"></script>
+
+    <!-- Custom Fonts -->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800'
+          rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic'
+          rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="../../font-awesome/css/font-awesome.min.css" type="text/css">
+
+    <!-- Plugin CSS -->
+    <link rel="stylesheet" href="../../css/animate.min.css" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+
+</head>
+
+<body>
+
+<!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse"
+                    data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="../../index.html">Jvivian.github.io</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a href="../../index.html" class="btn btn-sm">
+                        <i class="fa fa-3x fa-line-chart"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+<!-- Page Header -->
+<header class="intro-header">
+    <div class="container">
+        <div class="row">
+            <div class="caption" style="color: white">
+                <h2 style="margin: 0">RNA-Seq Expression Clustering</h2>
+                <h3>Using SKLearn, t-SNE, and Bokeh</h3>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Loader -->
+<div id="loader">
+    <div class="row">
+        <div class="col-md-12" style="height: 50px"></div>
+    </div>
+    <div class="row">
+        <div class="col-md-1"></div>
+        <div class="col-md-10" align="center">
+            <h2>Content Loading, Please Wait...</h2>
+        </div>
+    </div>
+</div>
+
+
+<div class="row">
+    <div class="col-md-3"></div>
+    <div class="col-md-6 text-center">
+        <p></p>
+        <p></p>
+        <p>
+            Clustering of <a href="https://www.gtexportal.org/home/" target="_blank">GTEx</a> and
+            <a href="https://cancergenome.nih.gov/" target="_blank">TCGA</a>
+            <a href="https://xenabrowser.net/datapages/?host=https://toil.xenahubs.net" target="_blank">RNA-seq
+                datasets</a>
+        </p>
+        <p>
+            All expression data was normalized with
+            <a href="https://bioconductor.org/packages/release/bioc/html/DESeq2.html" target="_blank">DESeq2</a>
+            to adjust for sequencing depth before clustering
+        </p>
+    </div>
+</div>
+
+
+<div class="row">
+    <div class="col-md-8 col-md-offset-2 text-center">
+        <h2>
+            Plots
+        </h2>
+        <table class="table table-hover text-center">
+            <tbody>
+            <tr>
+                <td colspan="6">
+                    <a href="rnaseq-clustering-tete-vs-tsne.html" target="_blank">
+                        Comparing t-SNE to t-ETE
+                    </a>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="6">
+                    <a href="rnaseq/dataset.html" target="_blank">
+                        All data colored by dataset
+                    </a>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="6">
+                    <a href="rnaseq/tissue.html" target="_blank">
+                        All data colored by tissue
+                    </a>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="6">
+                    <a href="rnaseq/type.html" target="_blank">
+                        All data colored by type
+                    </a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <a href="rnaseq/Adrenal.html" target="_blank" class="btn">Adrenal</a>
+                </td>
+                <td>
+                    <a href="rnaseq/Bladder.html" target="_blank" class="btn">Bladder</a>
+                </td>
+                <td>
+                    <a href="rnaseq/Brain.html" target="_blank" class="btn">Brain</a>
+                </td>
+                <td>
+                    <a href="rnaseq/Breast.html" target="_blank" class="btn">Breast</a>
+                </td>
+                <td>
+                    <a href="rnaseq/Cervix.html" target="_blank" class="btn">Cervix</a>
+                </td>
+                <td>
+                    <a href="rnaseq/Colon-Small_intestine.html" target="_blank" class="btn">Colon</a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <a href="rnaseq/Esophagus.html" target="_blank" class="btn">Esophagus</a>
+                </td>
+                <td>
+                    <a href="rnaseq/Kidney.html" target="_blank" class="btn">Kidney</a>
+                </td>
+                <td>
+                    <a href="rnaseq/Liver.html" target="_blank" class="btn">Liver</a>
+                </td>
+                <td>
+                    <a href="rnaseq/Lung.html" target="_blank" class="btn">Lung</a>
+                </td>
+                <td>
+                    <a href="rnaseq/Ovary.html" target="_blank" class="btn">Ovary</a>
+                </td>
+                <td>
+                    <a href="rnaseq/Pancreas.html" target="_blank" class="btn">Pancreas</a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <a href="rnaseq/Prostate.html" target="_blank" class="btn">Prostate</a>
+                </td>
+                <td>
+                    <a href="rnaseq/Skin-Head.html" target="_blank" class="btn">Skin-Head-Neck</a>
+                </td>
+                <td>
+                    <a href="rnaseq/Stomach.html" target="_blank" class="btn">Stomach</a>
+                </td>
+                <td>
+                    <a href="rnaseq/Testis.html" target="_blank" class="btn">Testis</a>
+                </td>
+                <td>
+                    <a href="rnaseq/Thyroid.html" target="_blank" class="btn">Thyroid</a>
+                </td>
+                <td>
+                    <a href="rnaseq/Uterus.html" target="_blank" class="btn">Uterus</a>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+
+<div class="row">
+    <div class="col-md-1"></div>
+    <div class="col-md-10 text-center">
+        <h2>
+            Breakdown of Samples in Dataset
+        </h2>
+        <script
+                src="../../js/bokeh/tissue-counts.js"
+                id="04b3619d-625f-43da-ad66-844b0b754adf"
+                data-bokeh-model-id="b6877e6c-011e-4261-a497-365f696f0bad"
+                data-bokeh-doc-id="7eb7350d-c18c-4a93-8640-dc369bf9c2e5"
+        ></script>
+    </div>
+</div>
+
+<div class="row" style="margin-top: 50px">
+    <div class="col-md-1"></div>
+    <div class="col-md-10 text-center">
+        <script
+                src="../../js/bokeh/tissue-type-counts.js"
+                id="9deb52f4-e26a-42f8-af66-81abebfa68ea"
+                data-bokeh-model-id="46c8b21c-5c88-418d-88ce-02f5b212048c"
+                data-bokeh-doc-id="131dbf5d-8c0b-46c1-a4cb-392a9a7aa8bc"
+        ></script>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-12" style="height: 10px"></div>
+</div>
+
+
+<div style="width: 100%; height: 1px; border-bottom: 1px solid #000; padding-top: 5px; padding-bottom: 5px;"></div>
+<!-- First Row -->
+
+
+<!-- jQuery -->
+<script src="../../js/jquery.js"></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="../../js/bootstrap.min.js"></script>
+
+<!-- Plugin JavaScript -->
+<script src="../../js/jquery.easing.min.js"></script>
+<script src="../../js/jquery.fittext.js"></script>
+<script src="../../js/wow.min.js"></script>
+<script src="../../js/jquery-loader.js"></script>
+
+<!-- Custom Theme JavaScript -->
+<script src="../../js/creative.js"></script>
+
+<div class="modal"><!-- Place at bottom of page --></div>
+</body>
+
+</html>

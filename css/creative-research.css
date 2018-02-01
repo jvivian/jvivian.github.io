@@ -53,7 +53,7 @@ p {
 
 .bg-primary {
     background-color: #00ade6;
-    background-image: url(../img/btbam.jpg);
+    background-image: url(/static/img/music/btbam.jpg);
     background-position: center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -182,8 +182,8 @@ header {
     position: relative;
     text-align: center;
     color: #fff;
-    background: url(../img/header.jpg) center;
-    background-image: linear-gradient(to bottom, rgba(0,0,0,0.2) 50%,rgba(255,255,255,1) 100%), url(../img/header.jpg);
+    background: url(/static/img/main/header.jpg) center;
+    background-image: linear-gradient(to bottom, rgba(0,0,0,0.2) 50%,rgba(255,255,255,1) 100%), url(/static/img/main/header.jpg);
     background-size: cover;
     overflow: visible;
 }

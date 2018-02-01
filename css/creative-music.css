@@ -182,7 +182,7 @@ header {
     position: relative;
     text-align: center;
     color: #fff;
-    background: url(../img/music-header-resize.jpg) center;
+    background: url(/static/img/music/music-header-resize.jpg) center;
     background-size: cover;
     overflow: visible;
 }

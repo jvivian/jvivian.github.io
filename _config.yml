@@ -1,0 +1,62 @@
+# Main page information
+cv: static/research/vivian_cv-4-20-17.pdf
+bio_pic: static/img/main/me.jpg
+
+
+# Visualization Links
+visualizations:
+
+    cosmic_tsne:
+      label: T-SNE of COSMIC Cancer Genes
+      link: static/visualizations/TSNE-cosmic-gene-census.html
+
+    drug_sankey:
+      label: Antineoplastic Sankey Diagram
+      link: static/visualizations/Drug-Sankey-Graph.html
+
+# Research Links
+research:
+
+    workflow:
+      label: Scalable RNA-seq Expression Workflow
+      link: https://github.com/BD2KGenomics/toil-rnaseq/
+
+    advancement:
+      label: PhD Advancement Proposal
+      link: static/research/Vivian_J__Advancement__Proposal.pdf
+
+    capstone:
+      label: Master's Capstone
+      link: static/research/Vivian_MS_Capstone_2014.pdf
+
+    nih_poster:
+      label: NIH Poster
+      link: static/research/Vivian_NIH_Poster.pdf
+
+    stanford_poster:
+      label: Stanford GTEx Poster
+      link: static/research/stanford-gtex-poster.pdf
+
+# Hobby Links
+hobby:
+
+    books:
+      label: Books
+      link: https://1drv.ms/o/s!AiirpWvlh1BpjAOtC2KjMTTVyxu1
+
+    ml:
+      label: Machine Learning
+      link: https://github.com/jvivian/Children-of-Skynet/
+
+    ow:
+      label: Overwatch
+      link: https://masteroverwatch.com/profile/pc/us/Thyrus-1549
+
+# Post Links
+posts:
+
+  europe:
+    label: Europe 2017 Trip
+    link: static/archived_content/europe-2017.html
+
+
