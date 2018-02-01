@@ -241,6 +241,10 @@ header .header-content .header-content-inner p {
     }
 }
 
+header .row {
+    text-shadow: 1px 1px 1px #fff, 2px 2px 2px #111;
+}
+
 .section-heading {
     margin-top: 0;
 }
