@@ -6,13 +6,13 @@ bio_pic: static/img/main/me.jpg
 # Visualization Links
 visualizations:
 
+    drug_sankey:
+      label: Antineoplastic Sankey Diagrams
+      link: static/visualizations/Drug-Sankey-Graph.html
+
     cosmic_tsne:
       label: T-SNE of COSMIC Cancer Genes
       link: static/visualizations/TSNE-cosmic-gene-census.html
-
-    drug_sankey:
-      label: Antineoplastic Sankey Diagram
-      link: static/visualizations/Drug-Sankey-Graph.html
 
 # Research Links
 research:
