@@ -82,9 +82,9 @@
 <header class="intro-header">
     <div class="container">
         <div class="row">
-            <div class="caption" style="color: white">
+            <div class="caption" style="color: black; text-shadow: text-shadow: 1px 1px 1px #fff, 2px 2px 2px #111">
                 <h2 style="margin: 0">RNA-Seq Expression Clustering</h2>
-                <h3>Using SKLearn, t-SNE, t-ETE, and Bokeh</h3>
+                <h3>Using SKLearn, t-SNE, Trimap, and Bokeh</h3>
             </div>
         </div>
     </div>
@@ -117,13 +117,13 @@
             Source: <a href="http://distill.pub/2016/misread-tsne/">distill.pub/2016/misread-tsne</a>
         </p>
         <p>
-            t-ETE is an alternative algorithm actively in development at UCSC that aims to address t-SNE's
+            Trimap is an alternative algorithm actively in development at UCSC that aims to address t-SNE's
             shortcomings and provide dimesnionality reduction that emphasizes information retention over aesthetics.
             <br>
             <a href="https://arxiv.org/abs/1611.09957">Low-dimensional Data Embedding via Robust Ranking</a>
         </p>
         <p>
-            Here we explore application of t-SNE and t-ETE to RNA-seq expression data (normalized for sequencing depth),
+            Here we explore application of t-SNE and Trimap to RNA-seq expression data (normalized for sequencing depth),
             collected from the Genotype Tissue Expression Consortium (GTEx) and The Cancer Genome Atlas (TCGA).
         </p>
     </div>
@@ -139,7 +139,7 @@
     <div class="col-md-2"></div>
     <div class="col-md-2 text-center">
         <h1>
-            t-ETE
+            Trimap
         </h1>
     </div>
 </div>
@@ -151,10 +151,10 @@
     <div class="col-md-8">
         <p>
             This first example is expression data collected from both normal and tumorous thyroid tissue. Both t-SNE and
-            t-ETE identify two subpopulations in the GTEx thyroid data, but t-SNE places the two clusters on opposite
+            Trimap identify two subpopulations in the GTEx thyroid data, but t-SNE places the two clusters on opposite
             sides of the tumor data. Dimensionality reduction is often used iteratively, where subclusters are then
             selected to be replot.
-            If we isolate just the thyroid tissue from GTEx (blue) and recluster it with t-SNE and t-ETE,
+            If we isolate just the thyroid tissue from GTEx (blue) and recluster it with t-SNE and Trimap,
             how much of the structure is preserved?
         </p>
     </div>
@@ -185,7 +185,7 @@
     <div class="col-md-2"></div>
     <div class="col-md-8">
         <p>
-            t-SNE turns the samples into a single blob whereas t-ETE preserves the original structure.
+            t-SNE turns the samples into a single blob whereas Trimap preserves the original structure.
         </p>
     </div>
 </div>
@@ -217,8 +217,9 @@
 <div class="row" style="margin-top: 20px">
     <div class="col-md-2"></div>
     <div class="col-md-8">
+        <h2>Combining Tissues</h2>
         <p>
-            Next, we'll examine what happens when we try and combine two tissues. Here is t-SNE and t-ETE clustering
+            Next, we'll examine what happens when we try and combine two tissues. Here is t-SNE and Trimap clustering
             for uterus
         </p>
     </div>
@@ -282,6 +283,7 @@
 <div class="row" style="margin-top: 50px">
     <div class="col-md-2"></div>
     <div class="col-md-8 text-center">
+        <h2>Outliers</h2>
         <p>
             Another big issue with t-SNE is identification of outliers. Here are a few selected tissues to illustrate
         </p>
