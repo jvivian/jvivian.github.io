@@ -6,6 +6,10 @@ bio_pic: static/img/main/me.jpg
 # Visualization Links
 visualizations:
 
+  type_heatmap:
+    label: TCGA and GTEx Differential Expression Heatmap
+    link: static/visualizations/TCGA-GTEx-DE-Type-HeatMap.html
+
     drug_sankey:
       label: Antineoplastic Sankey Diagrams
       link: static/visualizations/Drug-Sankey-Graph.html
