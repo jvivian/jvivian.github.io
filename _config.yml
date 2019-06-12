@@ -22,6 +22,10 @@ visualizations:
 # Research Links
 research:
 
+    defense:
+      label: Defense slides
+      link: static/defense/Defense-talk-June-6-2019.pdf
+
     workflow:
       label: Scalable RNA-seq Expression Workflow
       link: https://github.com/BD2KGenomics/toil-rnaseq/
