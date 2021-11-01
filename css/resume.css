@@ -117,7 +117,7 @@ p.lead {
     padding: 0.5rem;
   }
   #sideNav .navbar-brand .img-profile {
-    max-width: 20rem;
+    max-width: 14rem;
     max-height: 20rem;
     border: 0.5rem solid rgba(255, 255, 255, 0.2);
   }
@@ -155,9 +155,6 @@ section.resume-section {
   max-width: 75rem;
 }
 
-section.resume-section .resume-item .resume-date {
-  min-width: none;
-}
 
 @media (min-width: 768px) {
   section.resume-section {
