@@ -1,0 +1,398 @@
+---
+title: "Single-cell sequencing of the blood T cell repertoire"
+title-slide-attributes:
+    data-background-color: black
+    data-background-image: imgs/cover.png
+    data-background-size: contain
+    data-background-opacity: "0.2"
+subtitle: "before and after trastuzumab treatment in early-stage HER2+ breast cancer"
+date: March 14 2024
+date-format: long
+author: "John Vivian, Ph.D"
+css: styles.css
+format: 
+  revealjs:
+    controls: true
+    transition: 'slide'
+    center: true
+    height: 1117
+    width: 1728
+editor: 
+    renderOnSave: true
+---
+
+# Introduction  {background-color=#f0f4f7}
+
+## {background-iframe="https://jvivian.github.io/"}
+
+# Career Timeline {background-color=#f0f4f7 auto-animate="true"}
+:::{.columns}
+::::{.column width="20%"}
+::::
+::::{.column width="60%"}
+![](imgs/timeline.png)
+::::
+:::
+
+
+## Nanopore Research {background-color=#f0f4f7 auto-animate="true"}
+:::{.columns}
+::::{.column width="15%"}
+::::
+::::{.column width="85%"}
+![](imgs/timeline_nanopore.png)
+::::
+:::
+
+
+## Nanopore reread project {transition="zoom"}
+
+![**A**: Substrate bound to the lipid bilayer via a cholesterol tag with a helicase (Hel308) bound and inactive at the other end. **B**: Electric potential causes the DNA duplex to unwind, leaving behind the cholesterol tether bound to the complement strand. **C**: Electric potential and the steady-state nature of the G-Quadruplex (GQ) causes it to unfold allowing the helicase to become enzymatically active in the 3’ -> 5’ direction. **D**: As Hel308 translocates the DNA back up through the pore, the GQ will refold allowing an additional enzyme to become bound. **E**: Continued translocation. **F**: More than 3-4 abasic residues causes Hel308 to dissociate from the substrate (9 are used in the substrate). The DNA strand is then pulled back down and the cycle is able to repeat itself once more.](imgs/nanopore_figure.png){width=100%}
+
+## Computational Genomics Lab {background-color=#f0f4f7 auto-animate="true"}
+:::{.columns}
+::::{.column width="20%"}
+::::
+::::{.column width="80%"}
+![](imgs/timeline_grad.png)
+::::
+:::
+
+<!-- ## Computational Genomics Lab {background-color=#f0f4f7 auto-animate="true"}
+:::{.columns}
+::::{.column width="50%"}
+![](imgs/timeline_grad.png)
+::::
+::::{.column width="50%"}
+![](imgs/papers.png)
+::::
+::: -->
+
+
+<!-- ## {background-image=imgs/toil_splash.png} -->
+## {background-iframe="https://toil.ucsc-cgl.org/"} 
+
+## {background-image="imgs/toil-splash-page.png" background-opacity=0.25 transition="zoom"}
+
+:::{.columns}
+::::{.column width="5%"}
+::::
+::::{.column width="50%"}
+![](imgs/toil.png)
+::::
+:::
+
+
+## Data Access: GTEx and UCSC Genome Browser{background-image="imgs/toil-splash-page.png" background-opacity=0.1 transition="convex" auto-animate=true}
+:::{.columns}
+::::{.column width="55%"}
+![**UCSC Genome Browser**: A detailed 6700 bp exon-focused snapshot of a 43 Kbp segment on human chromosome 17 from the UCSC Genome Browser and highlights the tissue-specific expression of two genes as identified by GTEx RNA-seq. Tracks show tissue-specific expression of two genes from the GTEx dataset. 33 samples and 5 tissues displayed out of 7,304 samples and 53 tissues. The tracks for hg19 were produced using the UCSC liftOver tool, which converts coordinates from hg38 bedGraph files created by STAR2 within the Toil pipeline.](imgs/gtex.png)
+::::
+::::{.column width="45%"}
+![](imgs/UCSC-Genome-browser-paper.png)<br>
+::::
+:::
+
+## Data Access: GTEx and UCSC Genome Browser{background-image="imgs/toil-splash-page.png" background-opacity=0.1 transition="convex" auto-animate=true}
+:::{.columns}
+::::{.column width="50%"}
+![**UCSC Genome Browser**: A detailed 6700 bp exon-focused snapshot of a 43 Kbp segment on human chromosome 17 from the UCSC Genome Browser and highlights the tissue-specific expression of two genes as identified by GTEx RNA-seq. Tracks show tissue-specific expression of two genes from the GTEx dataset. 33 samples and 5 tissues displayed out of 7,304 samples and 53 tissues. The tracks for hg19 were produced using the UCSC liftOver tool, which converts coordinates from hg38 bedGraph files created by STAR2 within the Toil pipeline.](imgs/gtex.png)
+::::
+::::{.column width="50%"}
+![](imgs/sc_gtex_paper.png)<br>
+::::
+:::
+
+## {background-iframe="https://xena.ucsc.edu"}
+
+## {background-image="imgs/ucsc-xena-splash.png" background-opacity=0.2 transition="zoom"}
+:::{.columns}
+::::{.column width="10%"}
+::::
+::::{.column width="50%"}
+![**UCSC Xena Browser**: FOXM1 and its isoforms across 19,948 **TCGA, TARGET, GTEx** samples, noting upregulation of FOXM1B and C in tumors versus GTEx normals using UCSC Xena Browser](imgs/xena.png)
+::::
+:::
+
+
+:::{.notes}
+- Collaborated with researchers in the ucsc genome browser team to create RNA-seq expression browser tracks
+- Developed the toil-RNAseq pipeline
+- TCAP, known as the titin cap protein, is predominantly expressed in muscle tissue. On the other hand, PP1R1B, which is a potential therapeutic target for neurological disorders, is expressed in the brain's basal ganglia but not in muscle or brain cortex
+- Collaborated with the UCSC Xena team to provide an open-source data exploration platform of all ~20,000 samples
+:::
+
+
+## Research Data Collaborations {transition='concave'}
+![](imgs/UCSC-treehouse-splash.png)
+
+<!-- ## {transition="zoom" background-image="imgs/UCSC-treehouse-splash.png" background-opacity=0.3 auto-animate="true"}
+:::{.columns}
+::::{.column width="20%"}
+::::
+::::{.column width="80%"}
+![](imgs/jco_paper_title.png)
+::::
+::: -->
+
+## {transition="zoom" background-image="imgs/UCSC-treehouse-splash.png" background-opacity=0.3}
+:::{.columns}
+::::{.column width="51%"}
+![](imgs/jco_paper_title.png)
+::::
+::::{.column width="35%"}
+![The model represented in Bayesian plate notation. **G** and **D** stand for Gene and Dataset respectively. $x$ denotes the gene expression from a background dataset, forming a convex combination $\hat{y}$ when multiplied by the dot product of $\beta^T$. The model incorporates a 'jointly Dirichlet' distribution for $\beta$, as each dataset contributes to the overall distribution. We add a Laplacian error term $\epsilon$ to the expected expression $\hat{y}$ when modeling the observed expression of a new sample $y$.](imgs/jco_plate_notation.jpeg)
+::::
+:::
+
+## Atreca Inc. {background-color=#f0f4f7 auto-animate="true"}
+:::{.columns}
+::::{.column width="25%"}
+::::
+::::{.column width="75%"}
+![](imgs/timeline_atreca.png)
+::::
+:::
+
+::: {.notes}
+- Mention collaborating closely with protein engineering to design, maintain, improve tools they used every day
+- Ab-CRUNCH
+    - Annotated reports of antibody sequences, metadata, chain sequences, multiple alignments, and more
+    - 200 antibodies took 45 - 60 minutes to process, after I rewrote it from scratch I reduced the codebase by 66% and 200 antibodies could be processed and returned in about a minute.
+:::
+
+## Novel Antibody Target Discovery Platform {auto-animate="true" background-color=#f0f4f7}
+:::{.columns}
+::::{.column width="60%"}
+![](imgs/atreca_paper.png)
+::::
+::::{.column width="40%"}
+![](imgs/timeline_atreca.png)
+::::
+:::
+
+## Teiko Bio {background-color=#f0f4f7 auto-animate="true"}
+:::{.columns}
+::::{.column width="15%"}
+::::
+::::{.column width="85%"}
+![](imgs/timeline_teiko.png)
+::::
+:::
+
+
+## Next Steps? {background-color=#f0f4f7 auto-animate="true"}
+:::{.columns}
+::::{.column width="5%"}
+::::
+::::{.column width="75%"}
+![](imgs/timeline_ideaya.png)
+::::
+:::
+
+# Analysis of T-cell sub-populations in HER2+ breast cancer {background-color=#f0f4f7}
+
+## Study Background {background-color=#f0f4f7}
+:::{.columns}
+::::{.column width="50%"}
+:::{.center}
+**HER2+ Breast Cancer**
+::: 
+- HER2-positive breast cancer accounts for approximately 20% of breast cancer cases and is characterized by the overexpression of the human epidermal growth factor receptor 2 (HER2) gene [^1]
+
+::: {.incremental}
+- Anti-HER2 treatments, such as trastuzumab, have drastically the management of HER2-positive breast cancer, turning a once difficult-to-treat cancer into one with much more favorable outcomes [^2]
+::: 
+::::
+::::{.column width="50%"}
+:::{.incremental}
+:::{.center}
+**Tumor-Infiltrating Lymphocytes**
+::: 
+- Anti-tumor immunity plays a role in the efficacy of anti-HER2 treatment, as demonstrated by the association of TILs with prognosis and increased efficacy from treatment with trastuzumab and chemotherapy in HER2+ breast cancer [^3]
+-  Immunohistochemistry and RNA sequencing of breast tumor tissues has suggested that trastuzumab may recruit and activate anti-tumor T cells [^4]
+:::
+::::
+:::
+
+
+[^1]: Slamon, D. J., et al. (2001). "Use of chemotherapy plus a monoclonal antibody against HER2 for metastatic breast cancer that overexpresses HER2." New England Journal of Medicine, 344(11), 783-792.
+
+[^2]: Piccart-Gebhart, M. J., et al. (2005). "Trastuzumab after adjuvant chemotherapy in HER2-positive breast cancer." New England Journal of Medicine, 353(16), 1659-1672.
+
+[^3]: Loi, S., et al. (2014). "Tumor infiltrating lymphocytes are prognostic in triple negative breast cancer and predictive for trastuzumab benefit in early breast cancer." Ann Oncol, 25(8), 1544–1550.
+
+[^4]: Hendricks, WPD., et al. (2019). "PD-1-Associated Gene Expression Signature of Neoadjuvant Trastuzumab-Treated Tumors Correlates with Patient Survival in HER2-Positive Breast Cancer." Cancers, 11(10), 156.
+
+
+
+
+## Study Design {auto-animate="true"}
+:::{.columns}
+::::{.column width="15%"}
+::::
+::::{.column width="85%"}
+![](imgs/sc_fig1.png)
+::::
+:::
+
+## Study Design {auto-animate="true"}
+:::{.columns}
+::::{.column width="35%"}
+::: {.center}
+**Patient Cohort and Treatment Regimen**
+:::
+
+- **Study Group**: Analysis involved paired pre-treatment and on-treatment PBMC samples from five patients with HER2+ breast cancer, staged IIA–IV (IIA [n=2], IIIC [n=2], IV [n=1])
+- **Treatment Protocol**: Patients received preoperative therapy comprising docetaxel, carboplatin, trastuzumab, and pertuzumab
+::::
+::::{.column width="65%"}
+
+![](imgs/sc_fig1.png)
+::::
+:::
+
+## Study Design {auto-animate="true"}
+:::{.columns}
+::::{.column width="40%"}
+::: {.center}
+**Sampling and Analytical Methods**
+:::
+- **Sample Collection**: Blood samples were collected at the start of Cycle 1, Day 1 (C1D1) for pre-treatment baseline and on Day 1 of Cycle 3, 4, or 5 (C3, C4, C5) to monitor treatment response
+- **Cellular Profiling**: Peripheral CD3+ T cells from these samples were subjected to detailed profiling, utilizing 10x Genomics VDJ alongside gene expression single-cell sequencing to elucidate the immune landscape and gene expression alterations induced by the treatment
+
+::::
+::::{.column width="60%"}
+![](imgs/sc_fig1.png)
+::::
+:::
+
+## VDJ Pipeline {auto-animate="true"}
+![The cellranger vdj pipeline can be used to analyze sequencing data produced from Chromium Next GEM Single Cell 5' V(D)J libraries. It takes FASTQ files for V(D)J libraries and performs sequence assembly and paired clonotype calling. The pipeline uses the Chromium Cell Barcodes (also called 10x Barcodes) and UMIs to assemble V(D)J transcripts per cell. ](imgs/sc_vdj.png)
+
+
+## Cite-Seq {auto-animate="true" transition="convex"}
+::: {.columns}
+::::{.column width="45%"}
+![The cellranger vdj pipeline can be used to analyze sequencing data produced from Chromium Next GEM Single Cell 5' V(D)J libraries. It takes FASTQ files for V(D)J libraries and performs sequence assembly and paired clonotype calling. The pipeline uses the Chromium Cell Barcodes (also called 10x Barcodes) and UMIs to assemble V(D)J transcripts per cell. ](imgs/sc_vdj.png)
+::::
+::::{.column width="55%"}
+![CITE-seq uses DNA-barcoded antibodies to convert detection of proteins into a quantitative, sequenceable readout.  Antibody-bound oligos act as synthetic transcripts that are captured during most large-scale oligodT-based scRNA-seq library preparation protocols (e.g. 10x Genomics, Drop-seq, ddSeq).](imgs/cite-seq.png)
+::::
+:::
+
+
+## Single-Cell Data
+::: {.columns}
+::::{.column width="50%"}
+- **Cellular Data Depth**: High-quality data with over 6,500 cells profiled per sample
+
+::: {.incremental}
+- **Gene Expression**: Approximately 41 million reads per sample, ensuring robust gene expression profiling.
+TCR Analysis: Achieved ~100,000 Unique Molecular Identifiers (UMIs) per sample for precise T-cell receptor (TCR) sequencing
+- **CITE-Seq**: CITE-seq marker panel was included and used in conjunction with gene expression QC to filter the dataset and improve downstream analysis
+:::
+::::
+::::{.column width="50%"}
+![](imgs/sc_cell_counts.png)
+::::
+:::
+
+## Computational Methods
+::: {.columns}
+::::{.column width="50%"}
+![`AnnData` schema for storing annotated data. The core data structure used by `scanpy` which was used for this analysis.](imgs/anndata_schema.svg)
+::::
+::::{.column width="50%"}
+<br><br>
+
+::: {.center}
+**Data Processing**
+:::
+- **Filter Cells** - Remove cells with high mitochondrial content and too few genes detected
+- **Filter Genes** - Remove genes below minimum cell and variance threshold
+- **Normalization** - Regress out effects by total count and scale each gene to unit variance
+::::
+:::
+
+## Batch Correction and Dimensionality Reduction
+![`Harmony` operates in embedding space and produces a corrected `PCA` embedding which is used downstream to calculate the neighborhood graph which in turn is used by `UMAP` for further dimnsionality reduction.](imgs/Harmony.jpeg)
+
+##  Clustering and Annotation
+::: {.columns}
+::::{.column width="40%"}
+<br><br>
+
+::: {.center}
+**CD8+ and CD4+ T-cell subsets**
+:::
+- Eleven T cell subsets were characterized based on transcriptional profiles from the peripheral blood of donors
+- Undefined (grey) represents a collection of cells that did not confidently correspond to signatures of collected T cell subsets
+::::
+::::{.column width="60%"}
+![](imgs/sc_umap.png)
+::::
+:::
+
+<!-- ## Clonal expansions in patients with pathological complete response -->
+## Patient-level Analysis
+![Large T cell clonal expansions were observed in pre- and on-treatment peripheral blood samples from two patients who exhibited a pathological complete response. A high abundance of activated CD8+ TEM/EM cells was seen in patients 1 and 5 (red arrows). The other three patients had partial clinical responses with residual disease at surgery. Patient 4 had an increase in activated CD4+ Tregs on-treatment (red circle)](imgs/sc_umap_by_patient.png)
+
+## Variation in T-Cell Populations Across Treatment Stages {auto-animate="true"}
+::: {.columns}
+::::{.column width="35%"}
+<br><br>
+
+- Clonal expansions were observed in activated CD8+ TEM/EM cells in patients 1 and 5
+
+::: {.incremental}
+- Clonal expansion of activated CD4+ TEM/EM cells was observed in patient 5
+- No significant expansions were observed in the other subsets
+:::
+::::
+::::{.column width="65%"}
+![All five samples had similar pre- and on-treatment subset distributions and clonal expansion profiles](imgs/sc_tcell_subsets.png)
+::::
+:::
+
+## Variation in T-Cell Populations Across Treatment Stages {auto-animate="true"}
+![A possible trend toward on-treatment increase in activated CD4+ Tregs was observed. Activated CD4+ Treg subset sizes are small and therefore estimation of abundance has high error bars.](imgs/sc_population_over_time.png)
+
+## Summary {background-color=#f0f4f7}
+- Single-cell mRNA sequencing enables high-resolution characterization of immune cell subsets and represents a promising approach to assess the immune response to anti-HER2 treatment and other cancer therapeutics
+
+::: {.incremental}
+- In this study, single-cell mRNA sequencing of peripheral CD3+ T-cells identified clonal expansions in activated CD8+ and CD4+ T cells in HER2+ breast cancer patients who had a pathological complete response with preoperative docetaxel, carboplatin, trastuzumab, and pertuzumab treatment
+- These data are consistent with the model that T-cells play a key role in anti-HER2-mediated tumor control and warrant further investigation in a larger sample population
+:::
+
+. . . 
+
+- Due to the limited sample size ($n=5$), it was challenging to establish statistical correlations between complete pathological responses and the relative proportions of activated CD4/CD8 T-cell populations. Bayesian power analysis can be used to estimate the number of samples we _would_ need to reliably quantify a given effect size.
+
+# Open for Questions {background-color=#f0f4f7}
+
+Thank you for your time and consideration
+
+## Addendum: Bayesian Power Analysis {.smaller}
+::: {.columns}
+::::{.column width="50%"}
+<br>
+
+![This heatmap shows Bayesian power analysis outcomes, where the x-axis corresponds to **sample size** and the y-axis to **effect size**. Each cell shows the **power** ($p \in [0, 1]$), which corresponds to the proportion of simulations detecting a significant difference. Color intensity denotes power levels, with darker colors signifying higher statistical power. Power analysis can help discern study feasibility as well as provide a sense of what effect size is detectable given sample size limitations.](imgs/power_analysis.svg)
+::::
+::::{.column width="40%"}
+
+::: {.center}
+**General Steps**
+:::
+
+
+- Define your prior beliefs about the parameters of interest
+- Specify the data generating process model. This model should represent the belief of how data arises within an experimental context
+- Determine the decision rule defining "significant" or "practically relevant." A Bayesian approach is to specify a region of practical equivalence (ROPE) around a null value where effects are considered too small to be of interest
+- Simulate data of varying sample sizes at differing effect sizes
+- Run inference (e.g. MCMC) on each simulated dataset to estimate the posterior distributions
+- Calculate power by determining how often the decision rule leads to a conclusion of practical significance by calculating the proportion of simulations where the posterior distribution of the effect size meets your criteria for significance (e.g., falls outside the ROPE).
+::::
+:::
