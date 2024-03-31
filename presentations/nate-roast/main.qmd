@@ -248,6 +248,4 @@ It's always nice to make friends with someone you know you'll definitely see in 
 
 ## Last Roast on the Left  {.center background-color=#f0f4f7}
 
-::: {.center}
 {{< video vid/nate.mp4 width="400" >}} 
-::: 
