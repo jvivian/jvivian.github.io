@@ -1,0 +1,253 @@
+---
+title: "The Roast"
+subtitle: "of<br>Nathan Peterson"
+title-slide-attributes:
+    data-background-color: black
+    data-background-image: imgs/.png
+    data-background-size: contain
+    data-background-opacity: "0.2"
+css: styles.css
+date: "2024-03-30"
+format: revealjs
+editor:
+  renderOnSave: true
+---
+
+
+# {.center auto-animate="true"}
+
+::: {.r-fit-text}
+Nathan G. Peterson
+:::
+
+## {.center auto-animate="true"}
+
+::: {.columns}
+:::: {.column width="60%"}
+<br><br><br><br><br><br>
+Nathan G. Peterson
+
+What do we really know?
+::::
+:::: {.column width="35%"}
+![](imgs/unbirthday.png)
+::::
+:::
+
+::: {.notes}
+As a heads up, I can't even be mean to NPCs so I'm not going to be good at telling the type of depraved jokes Nate actually _wants_ to hear. I'll leave those to Reed, Dillon, and of course the meanest hater here, Hannah. I thought I'd start by talking about how I first came to know Nate. I moved into his room to live with my guitarist Reed and his buddy Steve. They gave me the lowdown on Nate and that's probably why his name is still in my phone as...
+:::
+
+## Rumored Brony {.center background-color=#f0f4f7 auto-animate="true"} 
+
+::: {.columns}
+:::: {.column width="40%"}
+![](imgs/brony.png)
+::::
+:::: {.column width="30%"}
+![](imgs/unbirthday.png)
+::::
+:::
+
+
+
+::: {.notes}
+which probably tells you all you need to know about Nate.
+
+Nate loves self-deprecating humor, so a roast makes perfect sense. He would be sort of like the group's self-hating Jew, except he's terrible with money and doesn't have the chutzpah to dig any tunnels. To gain more insight into this more-neanderthal-than-man, let's delve into some its stats.
+:::
+
+## Stats {.center background-color=#f0f4f7 auto-animate="true"} 
+
+::: {.columns}
+:::: {.column width="40%"}
+![](imgs/gac.png)
+::::
+:::: {.column width="50%" .incremental}
+- Age
+  - 30
+- Primary Attribute (+3)
+  - Loud
+- Traits (+2)
+  - Mouse Murder
+  - Blasphemy
+  - Heckling
+::::
+:::
+
+## Sexual Taxonomy {.center}
+
+![_Source: Wikipedia_](imgs/pyramid.jpg)
+
+## A Real Pillar of the Community {.center background-color=#f0f4f7}
+
+![](imgs/hockey.jpg)
+
+. . .
+
+> 5-6 year old girl: "Mommy I guess sometimes you're just supposed to be mean to people as part of the game."
+
+::: {.notes}
+Wow. What a piece of shit. Aside from fucking up young chilren's perceptions of decent human behavior, Nate also fucked up being a proper blasphemer
+:::
+
+## D+ Atheist {.center background-color=#f0f4f7}
+
+::: {.columns}
+:::: {.column width="25%"}
+![](imgs/jesus.jpg)
+::::
+:::: {.column width="75%" .incremental .r-fit-text}
+- Nate is raised non-religious, free from the burden of indoctrination (Atheists=3, Christians=0)
+- Nate rebels against his parents, but instead of doing actual cool activities like arson or smoking cigarettes he becomes a Christian (Christianity + 1)
+- Nate's piety convinces his parents to become religious (Christianity + 2)
+- Nate realizes August Burns Red peaked after _Messengers_ and ditches god for weed, plowing, and slightly less shitty metal (Christianity - 1)
+::::
+:::
+
+. . .
+
+**Result**: Net win for Christianity
+
+
+## Redundancy {auto-animate="true" transition="convex" background-color=#f0f4f7}
+
+![Look how quirky we are with our two stupid fucking drummers](imgs/kgwl.jpg)
+
+::: {.notes}
+Nate has a lot of quality features. None of which is friends don't already have better versions of, but he's appreciated, like a backup allele or a codon table. Having some unique quality is probably why he's been telling everyone how hip and bisexual he is.
+:::
+
+## Redundancy {auto-animate="true" transition="zoom" background-color=#f0f4f7}
+
+::: {.columns}
+:::: {.column width="40%"}
+![](imgs/kgwl.jpg)
+::::
+:::: {.column width="30%"}
+![](imgs/protection.png)
+::::
+:::: {.column width=30%}
+> "Hey guys, I bet you'd never believe what _I_ can gargle"
+::::
+:::
+
+::: {.notes}
+Anyway, no group needs two drummers.
+:::
+
+## Redundancy {auto-animate="true" transition="zoom" background-color=#f0f4f7}
+
+::: {.columns}
+:::: {.column width="70%"}
+![No](imgs/kgwl-x.jpg)
+::::
+:::: {.column width="30%"}
+![](imgs/protection.png)
+::::
+:::
+
+::: {.notes}
+But Nate doesn't just share redundant features, he shares with his friends. Or more accurately, overshares with his friends. For example, thanks to Nate's love of sharing many of us have been unburdened from such pesky troubles such as "knowing there's a twist in this movie and vaguely what form it takes and when." Or knowing pretty much exactly what Nate looks like when he's taking a shit
+:::
+
+## Sharing is Caring {auto-animate="true" transition="convex" .center background-color=#f0f4f7} 
+
+::: {.columns}
+:::: {.column width="30%"}
+![](imgs/john-poop.jpg)
+::::
+:::: {.column width="30%"}
+![](imgs/reed-poop.jpg)
+::::
+:::
+
+::: {.notes}
+Nate also enjoys sharing his vulgar ritual grotesqueries with his peers
+:::
+
+## Sharing is Caring {auto-animate="true" transition="convex" .center background-color=#f0f4f7}
+
+::: {.columns}
+:::: {.column width="30%" .incremental}
+![](imgs/reed-poop.jpg)
+::::
+:::: {.column width="30%"}
+![](imgs/reed-nate-pants.jpg)
+::::
+:::
+
+::: {.notes}
+I hate to do this while we're having a good time but I'm going to take a pause from this japery and talk about some real serious shit. (Dim the lights if possible)
+
+Quote, DSM-V, Criteria for substance abuse disorder: Craving to use the substance, wanting to cut down or stop and not being able to, taking the substance in large amounts or for longer than you're meant to, neglecting other parts of your life because of use, continuing to use even when it causess problems in your relationships, using substances even when it puts you in danger. As many of you have guessed...
+:::
+
+
+## G. is for my ~~GodHole~~ GamerHole {.center background-color=#f0f4f7}
+
+![](imgs/wow.png)
+
+::: {.notes}
+I'm talking about World of Warcraft. This piece of shit has quit playing WoW 4-5 times now. Spurning his real world friends to hang out with cryptocurrency incels. Tsk tsk. Before any of us can spend any more time thinking about substance abuse and how these definitions may apply to us, I want to draw us back to the focus of why we're here.j
+::: 
+
+## Just Look At This Smug Piece of Shit {auto-animate="true" transition="zoom" .center background-color=#f0f4f7}
+
+::: {.columns}
+:::: {.column width="30%"}
+![](imgs/smugdillon1.jpg)
+::::
+:::: {.column width="30%"}
+![](imgs/smug-nate.jpg)
+::::
+:::
+
+::: {.notes}
+Of course we can modernize this to more accurately reflect our present circumstances
+:::
+
+## Just Look At This Smug Piece of Shit {auto-animate="true" transition="zoom" .center background-color=#f0f4f7}
+
+::: {.columns}
+:::: {.column width="30%"}
+![](imgs/smug-nate.jpg)
+::::
+:::: {.column width="30%"}
+![](imgs/smugdillon2.jpg)
+::::
+:::
+
+::: {.notes}
+But at the end of the day...
+:::
+
+## He's Our Piece of Shit {.center background-color=#f0f4f7}
+
+::: {.columns}
+:::: {.column width="30%"}
+![](imgs/john-nate-1.png)
+::::
+:::: {.column width="40%"}
+<br><br>
+![](imgs/happy.jpeg)
+::::
+:::: {.column width="30%"}
+![](imgs/jongh.jpg)
+::::
+:::
+
+. . .
+
+:heart: Love my boy :heart:
+
+::: {.notes}
+It's always nice to make friends with someone you know you'll definitely see in hell. To cap things off, I just wanted to share an example of Nate in his natural habit enjoying something he loves
+:::
+
+
+## Last Roast on the Left  {.center background-color=#f0f4f7}
+
+::: {.center}
+{{< video vid/nate.mp4 width="400" >}} 
+::: 

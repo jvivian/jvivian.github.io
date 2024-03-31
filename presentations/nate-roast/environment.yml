@@ -1,0 +1,12 @@
+name: nate
+channels:
+  - defaults
+  - conda-forge
+dependencies:
+  - python=3.10
+  - quarto
+  - plotly
+  - polars
+  - pandas
+  - numpy
+
