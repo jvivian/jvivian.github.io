@@ -1,0 +1,46 @@
+/*-- scss:defaults --*/
+$body-bg: #f0f0f0;
+$body-color: #333;
+$link-color: #E91E63;
+$presentation-heading-color: #2196F3;
+
+/*-- scss:rules --*/
+.reveal .slide-number {
+  font-size: 24px;
+}
+
+.reveal h1 {
+  font-size: 2.5em;
+  color: #E91E63;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+}
+
+.reveal h2 {
+  font-size: 1.8em;
+  color: #2196F3;
+}
+
+.reveal p {
+  font-size: 1.2em;
+}
+
+.reveal ul {
+  font-size: 1.1em;
+}
+
+.reveal img {
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.column {
+  float: left;
+  padding: 10px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
